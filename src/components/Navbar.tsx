@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { useApp } from '../context/AppContext';
 import { 
   Search, 
@@ -31,6 +31,29 @@ export const Navbar: React.FC = () => {
 
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [searchFocused, setSearchFocused] = useState(false);
+  const searchContainerRef = useRef<HTMLDivElement>(null);
+
+  // Dismiss search dropdown on click outside or Escape
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (searchContainerRef.current && !searchContainerRef.current.contains(event.target as Node)) {
+        setSearchFocused(false);
+      }
+    };
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        setSearchFocused(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    document.addEventListener('keydown', handleKeyDown);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener('keydown', handleKeyDown);
+    };
+  }, []);
 
   const sampleSearchPrompts = [
     'I want to build an AI chatbot',
@@ -86,7 +109,10 @@ export const Navbar: React.FC = () => {
           </button>
 
           {/* Search Bar - Center Desktop */}
-          <div className="flex-1 max-w-xl relative hidden md:block">
+          <div 
+            ref={searchContainerRef} 
+            className="flex-1 min-w-[200px] sm:min-w-[240px] md:min-w-[260px] lg:min-w-[280px] xl:min-w-[340px] max-w-lg relative hidden md:block"
+          >
             <form onSubmit={handleSearchSubmit} className="relative">
               <div className="relative flex items-center">
                 <Search className="absolute left-3.5 w-4 h-4 text-slate-400 pointer-events-none" />
@@ -95,14 +121,14 @@ export const Navbar: React.FC = () => {
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                   onFocus={() => setSearchFocused(true)}
-                  placeholder="What do you want to build, learn, automate, or explore?"
+                  placeholder="What do you want to build, learn, or explore?"
                   className="w-full pl-10 pr-10 py-2 text-xs lg:text-sm rounded-full bg-slate-100/90 dark:bg-slate-800/80 border border-slate-200/80 dark:border-slate-700/60 focus:bg-white dark:focus:bg-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-500/40 focus:border-blue-500 text-slate-900 dark:text-white placeholder-slate-400 transition-all shadow-inner"
                 />
                 {searchQuery && (
                   <button
                     type="button"
                     onClick={() => setSearchQuery('')}
-                    className="absolute right-3 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200"
+                    className="absolute right-3 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 cursor-pointer"
                   >
                     <X className="w-4 h-4" />
                   </button>
@@ -113,16 +139,19 @@ export const Navbar: React.FC = () => {
             {/* Smart Search Dropdown Suggestions */}
             {searchFocused && (
               <div 
-                className="absolute top-full left-0 right-0 mt-2 bg-white dark:bg-slate-900 rounded-2xl shadow-2xl border border-slate-200 dark:border-slate-800 p-4 z-50 animate-in fade-in slide-in-from-top-2 duration-150"
-                onMouseDown={(e) => e.preventDefault()} // prevent blur before click
+                className="absolute top-full left-0 w-[360px] sm:w-[480px] max-w-[90vw] mt-2 bg-white dark:bg-slate-900 rounded-2xl shadow-2xl border border-slate-200 dark:border-slate-800 p-4 z-50 animate-in fade-in slide-in-from-top-2 duration-150"
+                onMouseDown={(e) => e.preventDefault()}
               >
-                <div className="flex items-center justify-between pb-2 mb-2 border-b border-slate-100 dark:border-slate-800 text-xs font-semibold text-slate-500 dark:text-slate-400">
-                  <span className="flex items-center gap-1.5">
+                <div className="flex items-center justify-between pb-2 mb-2.5 border-b border-slate-100 dark:border-slate-800 text-xs font-semibold text-slate-500 dark:text-slate-400">
+                  <span className="flex items-center gap-1.5 font-bold text-slate-700 dark:text-slate-200">
                     <Sparkles className="w-3.5 h-3.5 text-blue-500" />
                     Popular Natural Language Queries
                   </span>
-                  <button onClick={() => setSearchFocused(false)} className="text-slate-400 hover:text-slate-600 text-[11px]">
-                    Close
+                  <button 
+                    onClick={() => setSearchFocused(false)} 
+                    className="text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 text-[11px] px-2 py-0.5 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 cursor-pointer transition-colors"
+                  >
+                    Close ✕
                   </button>
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-1.5">
@@ -130,9 +159,9 @@ export const Navbar: React.FC = () => {
                     <button
                       key={idx}
                       onClick={() => selectPrompt(prompt)}
-                      className="text-left px-3 py-2 rounded-xl text-xs text-slate-700 dark:text-slate-200 hover:bg-blue-50 dark:hover:bg-slate-800 hover:text-blue-600 dark:hover:text-blue-400 transition-colors flex items-center gap-2 group cursor-pointer"
+                      className="text-left px-3 py-2 rounded-xl text-xs text-slate-700 dark:text-slate-200 hover:bg-blue-50 dark:hover:bg-slate-800 hover:text-blue-600 dark:hover:text-blue-400 transition-colors flex items-center gap-2 group cursor-pointer border border-transparent hover:border-blue-100 dark:hover:border-slate-700"
                     >
-                      <span className="w-1.5 h-1.5 rounded-full bg-blue-500/60 group-hover:scale-125 transition-transform" />
+                      <span className="w-1.5 h-1.5 rounded-full bg-blue-500 shrink-0 group-hover:scale-125 transition-transform" />
                       <span className="truncate">{prompt}</span>
                     </button>
                   ))}
@@ -142,7 +171,7 @@ export const Navbar: React.FC = () => {
           </div>
 
           {/* Desktop Navigation Links */}
-          <nav className="hidden lg:flex items-center gap-1">
+          <nav className="hidden lg:flex items-center gap-1 shrink-0">
             <button
               onClick={() => setCurrentRoute('catalog')}
               className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-colors flex items-center gap-1.5 cursor-pointer ${
@@ -169,38 +198,41 @@ export const Navbar: React.FC = () => {
 
             <button
               onClick={() => setCurrentRoute('how-it-works')}
-              className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-colors flex items-center gap-1.5 cursor-pointer ${
+              title="How It Works Architectural Flows"
+              className={`px-2.5 xl:px-3 py-1.5 rounded-lg text-xs font-semibold transition-colors flex items-center gap-1.5 cursor-pointer ${
                 currentRoute === 'how-it-works' 
                   ? 'bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400' 
                   : 'text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800'
               }`}
             >
               <Workflow className="w-3.5 h-3.5 text-indigo-500" />
-              How It Works
+              <span className="hidden xl:inline">How It Works</span>
             </button>
 
             <button
               onClick={() => setCurrentRoute('learning-paths')}
-              className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-colors flex items-center gap-1.5 cursor-pointer ${
+              title="Guided Learning Paths"
+              className={`px-2.5 xl:px-3 py-1.5 rounded-lg text-xs font-semibold transition-colors flex items-center gap-1.5 cursor-pointer ${
                 currentRoute === 'learning-paths' 
                   ? 'bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400' 
                   : 'text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800'
               }`}
             >
-              <GraduationCap className="w-3.5 h-3.5" />
-              Learning Paths
+              <GraduationCap className="w-3.5 h-3.5 text-rose-500" />
+              <span className="hidden xl:inline">Learning Paths</span>
             </button>
 
             <button
               onClick={() => setCurrentRoute('wizard')}
-              className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-colors flex items-center gap-1.5 cursor-pointer ${
+              title="AI Recommendation Assistant"
+              className={`px-2.5 xl:px-3 py-1.5 rounded-lg text-xs font-semibold transition-colors flex items-center gap-1.5 cursor-pointer ${
                 currentRoute === 'wizard' 
                   ? 'bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400' 
                   : 'text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800'
               }`}
             >
               <Sparkles className="w-3.5 h-3.5 text-amber-500" />
-              AI Assistant
+              <span className="hidden xl:inline">AI Assistant</span>
             </button>
 
             <button

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { useApp } from '../context/AppContext';
 import { 
   Scale, 
@@ -22,6 +22,17 @@ export const ComparePage: React.FC = () => {
   } = useApp();
 
   const [toolPickerOpen, setToolPickerOpen] = useState<boolean>(false);
+  const toolPickerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (toolPickerRef.current && !toolPickerRef.current.contains(event.target as Node)) {
+        setToolPickerOpen(false);
+      }
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
 
   const selectedTools = allTools.filter(t => compareToolIds.includes(t.id));
 
@@ -207,7 +218,7 @@ export const ComparePage: React.FC = () => {
         ))}
 
         {selectedTools.length < 4 && (
-          <div className="relative">
+          <div ref={toolPickerRef} className="relative">
             <button
               onClick={() => setToolPickerOpen(!toolPickerOpen)}
               className="px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 text-xs font-semibold flex items-center gap-1 cursor-pointer transition-colors"
