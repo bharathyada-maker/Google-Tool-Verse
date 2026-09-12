@@ -70,36 +70,59 @@ export const GeminiDemo: React.FC = () => {
     setStreamedText('');
     setReasoningStep(1);
 
-    const targetOutput = simulatedOutputs[prompt] || {
-      steps: ['Analyzing context...', 'Evaluating semantic intent...', 'Formatting response...'],
-      response: `[Simulated ${modelTier === 'flash' ? 'Gemini 1.5 Flash' : 'Gemini 1.5 Pro'} Output]\nAnalyzed prompt with temperature ${temperature}. Reasoning complete with verified factual grounding.`
-    };
+    // Get preset response or intelligently synthesize response based on user input
+    let targetOutput = simulatedOutputs[prompt.trim()];
+    if (!targetOutput) {
+      const lower = prompt.toLowerCase();
+      if (lower.includes('code') || lower.includes('python') || lower.includes('function') || lower.includes('script')) {
+        targetOutput = {
+          steps: ['Parsing programming intent...', 'Synthesizing syntax-validated AST...', 'Validating execution type safety...'],
+          response: `# Gemini ${modelTier === 'flash' ? '1.5 Flash' : '1.5 Pro'} Code Generation (Temp: ${temperature})\ndef analyze_multimodal_stream(video_uri: str, query: str) -> dict:\n    """\n    Streams video chunks to Gemini multimodal encoder and queries with cross-attention.\n    """\n    response = gemini_client.models.generate_content(\n        model="gemini-1.5-${modelTier}",\n        contents=[Part.from_uri(video_uri), query]\n    )\n    return {"status": "success", "result": response.text}`
+        };
+      } else if (lower.includes('json') || lower.includes('schema') || lower.includes('extract')) {
+        targetOutput = {
+          steps: ['Identifying named entities...', 'Enforcing JSON schema constraints...', 'Serializing response...'],
+          response: `{\n  "query": ${JSON.stringify(prompt)},\n  "confidence_score": 0.98,\n  "model": "gemini-1.5-${modelTier}",\n  "structured_entities": [\n    {"type": "domain_concept", "value": "Google Cloud & AI"},\n    {"type": "execution_mode", "value": "low-latency streaming"}\n  ]\n}`
+        };
+      } else {
+        targetOutput = {
+          steps: [
+            'Tokenizing semantic input representations...',
+            'Querying multimodal 2M context memory...',
+            'Filtering safety guardrails and streaming response...'
+          ],
+          response: `• **Core Understanding**: Processed "${prompt.slice(0, 60)}${prompt.length > 60 ? '...' : ''}" using ${modelTier === 'flash' ? 'Gemini 1.5 Flash (low latency)' : 'Gemini 1.5 Pro (deep reasoning)'} with temperature ${temperature}.
+• **Multimodal Cross-Attention**: Synthesizes inputs across text, video, audio, and code in a native shared embedding space with up to 2M tokens context.
+• **Grounded Synthesis**: Delivers verified, low-latency reasoning output with built-in safety filtering and source attribution.`
+        };
+      }
+    }
 
-    // Step 1
+    // Step 1: Tokenize
     setTimeout(() => {
       setReasoningStep(2);
-      // Step 2
+      // Step 2: Cross-Attention Memory
       setTimeout(() => {
         setReasoningStep(3);
-        // Step 3 & Stream
+        // Step 3: Stream Output
         setTimeout(() => {
           setReasoningStep(4);
-          let current = '';
           const fullText = targetOutput.response;
-          let idx = 0;
-          const interval = setInterval(() => {
-            if (idx < fullText.length) {
-              current += fullText[idx];
-              setStreamedText(current);
-              idx += 2;
+          let charIndex = 0;
+          const streamInterval = setInterval(() => {
+            // Advance by 3 characters per tick for smooth, authentic LLM streaming
+            charIndex += 3;
+            if (charIndex < fullText.length) {
+              setStreamedText(fullText.slice(0, charIndex));
             } else {
-              clearInterval(interval);
+              setStreamedText(fullText);
+              clearInterval(streamInterval);
               setIsGenerating(false);
             }
           }, 15);
-        }, 600);
-      }, 600);
-    }, 600);
+        }, 500);
+      }, 500);
+    }, 500);
   };
 
   return (
