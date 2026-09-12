@@ -182,7 +182,7 @@ export const GeminiDemo: React.FC = () => {
           className="w-full bg-slate-950/80 border border-slate-700 rounded-2xl p-3.5 text-xs text-slate-100 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500 font-mono"
           placeholder="Enter a prompt for Gemini..."
         />
-        <div className="flex items-center justify-between mt-2 px-1 text-[11px] text-slate-400">
+        <div className="flex flex-wrap items-center justify-between gap-3 mt-2 px-1 text-[11px] text-slate-400">
           <div className="flex items-center gap-2">
             <Sliders className="w-3.5 h-3.5" />
             <span>Temperature: {temperature}</span>
@@ -364,7 +364,7 @@ export const BigQueryDemo: React.FC = () => {
 
       {/* Execution Stats Pill */}
       {executionStats && (
-        <div className="flex items-center gap-4 text-[11px] bg-slate-950/80 px-4 py-2 rounded-xl border border-slate-800/80 text-slate-300">
+        <div className="flex flex-wrap items-center gap-2.5 sm:gap-4 text-[11px] bg-slate-950/80 px-4 py-2.5 rounded-xl border border-slate-800/80 text-slate-300">
           <div><span className="text-slate-500">Bytes Processed:</span> <strong className="text-white">{executionStats.bytes}</strong></div>
           <div><span className="text-slate-500">Slot Latency:</span> <strong className="text-white">{executionStats.time}</strong></div>
           <div><span className="text-slate-500">Rows Returned:</span> <strong className="text-emerald-400">{executionStats.rows}</strong></div>
@@ -372,7 +372,7 @@ export const BigQueryDemo: React.FC = () => {
       )}
 
       {/* Result Table */}
-      <div className="overflow-x-auto rounded-2xl border border-slate-800 bg-slate-950">
+      <div className="overflow-x-auto rounded-2xl border border-slate-800 bg-slate-950 touch-scroll">
         <table className="w-full text-left text-xs font-mono">
           <thead className="bg-slate-900/80 text-slate-400 border-b border-slate-800">
             {selectedDataset === 'wikipedia' ? (
@@ -675,7 +675,7 @@ export const CloudDeployDemo: React.FC = () => {
             <div className="text-emerald-400 font-bold pt-2 border-t border-slate-800">
               ✔ Service [my-service] has been deployed and is serving 100% traffic at:
               <br />
-              <a href="https://my-service-7128a-uc.a.run.app" target="_blank" rel="noreferrer" className="underline text-blue-400">
+              <a href="https://my-service-7128a-uc.a.run.app" target="_blank" rel="noreferrer" className="underline text-blue-400 break-all">
                 https://my-service-7128a-uc.a.run.app
               </a>
             </div>

@@ -240,7 +240,7 @@ export const WizardPage: React.FC = () => {
         /* ======================================================== */
         /* WIZARD QUESTIONNAIRE */
         /* ======================================================== */
-        <div className="bg-white dark:bg-slate-900 rounded-3xl p-6 sm:p-10 border border-slate-200/80 dark:border-slate-800 shadow-xl space-y-8">
+        <div className="bg-white dark:bg-slate-900 rounded-3xl p-4 sm:p-8 lg:p-10 border border-slate-200/80 dark:border-slate-800 shadow-xl space-y-8">
           
           {/* Progress Indicator */}
           <div className="flex items-center justify-between border-b border-slate-100 dark:border-slate-800 pb-4 text-xs font-bold text-slate-400">
@@ -410,7 +410,7 @@ export const WizardPage: React.FC = () => {
           <div className="space-y-8 animate-in fade-in zoom-in-95 duration-200">
             
             {/* Recommendation Header Card */}
-            <div className="bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-600 text-white rounded-3xl p-6 sm:p-10 shadow-2xl space-y-6">
+            <div className="bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-600 text-white rounded-3xl p-5 sm:p-8 lg:p-10 shadow-2xl space-y-6">
               <div className="flex items-center justify-between">
                 <span className="text-xs font-black uppercase tracking-wider bg-white/20 px-3 py-1 rounded-full backdrop-blur-sm">
                   ★ Best Match Recommendation
@@ -449,10 +449,10 @@ export const WizardPage: React.FC = () => {
                 </ul>
               </div>
 
-              <div className="flex flex-wrap gap-3">
+              <div className="flex flex-col sm:flex-row flex-wrap gap-3">
                 <button
                   onClick={() => navigateToTool(result.tool.id)}
-                  className="px-6 py-3 rounded-xl bg-white text-slate-900 hover:bg-slate-100 font-bold text-xs flex items-center gap-2 shadow-md cursor-pointer transition-all"
+                  className="w-full sm:w-auto px-6 py-3 rounded-xl bg-white text-slate-900 hover:bg-slate-100 font-bold text-xs flex items-center justify-center gap-2 shadow-md cursor-pointer transition-all"
                 >
                   <span>Explore {result.tool.name} Package</span>
                   <ArrowRight className="w-3.5 h-3.5" />
@@ -460,7 +460,7 @@ export const WizardPage: React.FC = () => {
                 {result.suggestedLearningPath && (
                   <button
                     onClick={() => navigateToPath(result.suggestedLearningPath!.id)}
-                    className="px-5 py-3 rounded-xl bg-white/20 hover:bg-white/30 text-white font-semibold text-xs flex items-center gap-2 backdrop-blur-sm cursor-pointer"
+                    className="w-full sm:w-auto px-5 py-3 rounded-xl bg-white/20 hover:bg-white/30 text-white font-semibold text-xs flex items-center justify-center gap-2 backdrop-blur-sm cursor-pointer"
                   >
                     <GraduationCap className="w-4 h-4" />
                     <span>Follow Guided Path</span>

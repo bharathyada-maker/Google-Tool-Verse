@@ -51,12 +51,12 @@ export const HowItWorksPage: React.FC = () => {
       </div>
 
       {/* Tool Flow Selector Carousel/Pills */}
-      <div className="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-none">
+      <div className="flex items-center gap-2 overflow-x-auto pb-2 touch-scroll no-scrollbar">
         {availableToolsWithFlows.map(tool => (
           <button
             key={tool.id}
             onClick={() => handleToolSelect(tool.id)}
-            className={`px-4 py-2 rounded-2xl text-xs font-bold shrink-0 transition-all cursor-pointer flex items-center gap-2 ${
+            className={`px-4 py-2 rounded-2xl text-xs font-bold shrink-0 whitespace-nowrap transition-all cursor-pointer flex items-center gap-2 ${
               currentTool.id === tool.id
                 ? 'bg-indigo-600 text-white shadow-md shadow-indigo-500/20'
                 : 'bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800'
@@ -69,7 +69,7 @@ export const HowItWorksPage: React.FC = () => {
       </div>
 
       {/* Interactive Visual Flow Container */}
-      <div className="bg-white dark:bg-slate-900 rounded-3xl p-6 sm:p-8 border border-slate-200/80 dark:border-slate-800 shadow-xl space-y-8">
+      <div className="bg-white dark:bg-slate-900 rounded-3xl p-4 sm:p-6 lg:p-8 border border-slate-200/80 dark:border-slate-800 shadow-xl space-y-8">
         
         {/* Active Tool Flow Header */}
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-slate-100 dark:border-slate-800">
@@ -144,7 +144,7 @@ export const HowItWorksPage: React.FC = () => {
         </div>
 
         {/* Active Stage Detailed Breakdown Panel */}
-        <div className="bg-slate-50 dark:bg-slate-950/60 rounded-3xl p-6 sm:p-8 border border-slate-200 dark:border-slate-800 space-y-4">
+        <div className="bg-slate-50 dark:bg-slate-950/60 rounded-3xl p-4 sm:p-6 lg:p-8 border border-slate-200 dark:border-slate-800 space-y-4">
           <div className="flex items-center gap-2">
             <span className="text-xs font-bold px-2.5 py-1 rounded-full bg-indigo-100 dark:bg-indigo-900/40 text-indigo-700 dark:text-indigo-300">
               Stage {activeStepIndex + 1}: {activeStep.label}

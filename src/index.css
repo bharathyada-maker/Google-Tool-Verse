@@ -79,3 +79,30 @@
   width: 460px !important;
   max-width: calc(100vw - 32px) !important;
 }
+
+/* Cross-device responsive safeguards & touch scrolling */
+html, body {
+  overflow-x: clip;
+  width: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.touch-scroll {
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+}
+
+.sticky-col-shadow {
+  box-shadow: 3px 0 10px rgba(0, 0, 0, 0.05);
+}
+.dark .sticky-col-shadow {
+  box-shadow: 3px 0 10px rgba(0, 0, 0, 0.35);
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

@@ -49,7 +49,7 @@ export const SavedPage: React.FC = () => {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         
         {/* Card 1: Badges Earned */}
-        <div className="p-6 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 space-y-3">
+        <div className="p-4 sm:p-6 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 space-y-3">
           <div className="flex items-center justify-between">
             <div className="text-xs font-bold uppercase text-amber-500 tracking-wider flex items-center gap-1.5">
               <Award className="w-4 h-4" />
@@ -76,7 +76,7 @@ export const SavedPage: React.FC = () => {
         </div>
 
         {/* Card 2: Active Learning Paths */}
-        <div className="p-6 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 space-y-3 md:col-span-2">
+        <div className="p-4 sm:p-6 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 space-y-3 md:col-span-2">
           <div className="flex items-center justify-between">
             <div className="text-xs font-bold uppercase text-blue-600 dark:text-blue-400 tracking-wider flex items-center gap-1.5">
               <GraduationCap className="w-4 h-4" />

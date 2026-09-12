@@ -63,10 +63,10 @@ const AppContent: React.FC = () => {
 
       {/* Persistent Floating Compare Drawer if tools are queued */}
       {compareToolIds.length > 0 && currentRoute !== 'compare' && (
-        <div className="fixed bottom-4 left-1/2 -translate-x-1/2 z-40 bg-slate-900/95 dark:bg-slate-900/95 text-white backdrop-blur-md px-4 py-3 rounded-2xl border border-slate-700 shadow-2xl flex items-center gap-3 animate-in slide-in-from-bottom-3 duration-200">
-          <div className="flex items-center gap-2">
+        <div className="fixed bottom-4 left-1/2 -translate-x-1/2 z-40 bg-slate-900/95 dark:bg-slate-900/95 text-white backdrop-blur-md px-3 sm:px-4 py-2.5 sm:py-3 rounded-2xl border border-slate-700 shadow-2xl flex items-center justify-between sm:justify-start gap-2.5 sm:gap-3 max-w-[calc(100vw-24px)] w-max animate-in slide-in-from-bottom-3 duration-200">
+          <div className="flex items-center gap-2 shrink-0">
             <Scale className="w-4 h-4 text-blue-400" />
-            <span className="text-xs font-bold">Compare ({compareToolIds.length}/4):</span>
+            <span className="text-xs font-bold whitespace-nowrap">Compare ({compareToolIds.length}/4):</span>
           </div>
 
           <div className="hidden sm:flex items-center gap-1.5">

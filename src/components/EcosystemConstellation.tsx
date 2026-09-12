@@ -140,7 +140,7 @@ export const EcosystemConstellation: React.FC = () => {
     return node ? { x: node.x, y: node.y } : { x: 50, y: 50 };
   };
 
-  // Parallax mouse movement
+  // Parallax mouse and touch movement
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     if (!containerRef.current) return;
     const rect = containerRef.current.getBoundingClientRect();
@@ -150,6 +150,19 @@ export const EcosystemConstellation: React.FC = () => {
   };
 
   const handleMouseLeave = () => {
+    setMousePos({ x: 0, y: 0 });
+  };
+
+  const handleTouchMove = (e: React.TouchEvent<HTMLDivElement>) => {
+    if (!containerRef.current || e.touches.length === 0) return;
+    const touch = e.touches[0];
+    const rect = containerRef.current.getBoundingClientRect();
+    const x = ((touch.clientX - rect.left) / rect.width - 0.5) * 14;
+    const y = ((touch.clientY - rect.top) / rect.height - 0.5) * 14;
+    setMousePos({ x, y });
+  };
+
+  const handleTouchEnd = () => {
     setMousePos({ x: 0, y: 0 });
   };
 
@@ -291,7 +304,9 @@ export const EcosystemConstellation: React.FC = () => {
       ref={containerRef}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
-      className="relative w-full bg-[#070A13] text-white rounded-3xl p-6 sm:p-8 border border-slate-800 shadow-[0_0_50px_rgba(15,23,42,0.6)] overflow-hidden transition-all duration-300"
+      onTouchMove={handleTouchMove}
+      onTouchEnd={handleTouchEnd}
+      className="relative w-full bg-[#070A13] text-white rounded-3xl p-4 sm:p-6 lg:p-8 border border-slate-800 shadow-[0_0_50px_rgba(15,23,42,0.6)] overflow-hidden transition-all duration-300"
     >
       {/* Background Architectural Blueprint Grid */}
       <div 
@@ -324,41 +339,44 @@ export const EcosystemConstellation: React.FC = () => {
         </div>
 
         {/* View Mode Segmented Switcher (WOW Factor!) */}
-        <div className="flex items-center gap-1 bg-slate-950 p-1 rounded-2xl border border-slate-800">
+        <div className="flex items-center gap-1 bg-slate-950 p-1 rounded-2xl border border-slate-800 w-full sm:w-auto justify-between sm:justify-start">
           <button
             onClick={() => handleModeChange('synapse')}
-            className={`px-3 py-1.5 rounded-xl font-semibold flex items-center gap-1.5 text-xs transition-all cursor-pointer ${
+            className={`flex-1 sm:flex-initial px-2.5 sm:px-3 py-1.5 rounded-xl font-semibold flex items-center justify-center gap-1.5 text-xs transition-all cursor-pointer ${
               viewMode === 'synapse'
                 ? 'bg-blue-600 text-white shadow-md shadow-blue-500/25 font-bold'
                 : 'text-slate-400 hover:text-white hover:bg-slate-800'
             }`}
           >
             <Network className="w-3.5 h-3.5" />
-            <span>Synapse Mesh</span>
+            <span className="hidden sm:inline">Synapse Mesh</span>
+            <span className="sm:hidden">Synapse</span>
           </button>
 
           <button
             onClick={() => handleModeChange('orbit')}
-            className={`px-3 py-1.5 rounded-xl font-semibold flex items-center gap-1.5 text-xs transition-all cursor-pointer ${
+            className={`flex-1 sm:flex-initial px-2.5 sm:px-3 py-1.5 rounded-xl font-semibold flex items-center justify-center gap-1.5 text-xs transition-all cursor-pointer ${
               viewMode === 'orbit'
                 ? 'bg-indigo-600 text-white shadow-md shadow-indigo-500/25 font-bold'
                 : 'text-slate-400 hover:text-white hover:bg-slate-800'
             }`}
           >
             <Orbit className="w-3.5 h-3.5" />
-            <span>Orbital Gravity</span>
+            <span className="hidden sm:inline">Orbital Gravity</span>
+            <span className="sm:hidden">Orbit</span>
           </button>
 
           <button
             onClick={() => handleModeChange('stack')}
-            className={`px-3 py-1.5 rounded-xl font-semibold flex items-center gap-1.5 text-xs transition-all cursor-pointer ${
+            className={`flex-1 sm:flex-initial px-2.5 sm:px-3 py-1.5 rounded-xl font-semibold flex items-center justify-center gap-1.5 text-xs transition-all cursor-pointer ${
               viewMode === 'stack'
                 ? 'bg-emerald-600 text-white shadow-md shadow-emerald-500/25 font-bold'
                 : 'text-slate-400 hover:text-white hover:bg-slate-800'
             }`}
           >
             <Layers className="w-3.5 h-3.5" />
-            <span>Stack Matrix</span>
+            <span className="hidden sm:inline">Stack Matrix</span>
+            <span className="sm:hidden">Stack</span>
           </button>
         </div>
 
@@ -444,7 +462,7 @@ export const EcosystemConstellation: React.FC = () => {
       <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
         
         {/* Canvas Area with Zoom Controls */}
-        <div className="lg:col-span-8 relative aspect-[16/10] sm:aspect-[16/9] w-full bg-[#050811] rounded-3xl border border-slate-800/80 p-3 select-none overflow-hidden shadow-2xl group">
+        <div className="lg:col-span-8 relative aspect-[4/3] sm:aspect-[16/10] lg:aspect-[16/9] min-h-[340px] sm:min-h-[420px] w-full bg-[#050811] rounded-3xl border border-slate-800/80 p-2 sm:p-3 select-none overflow-hidden shadow-2xl group">
           
           {/* Zoom floating controls */}
           <div className="absolute top-3 right-3 z-30 flex flex-col gap-1.5 bg-slate-900/90 p-1.5 rounded-2xl border border-slate-800 backdrop-blur-md shadow-lg">
@@ -488,7 +506,7 @@ export const EcosystemConstellation: React.FC = () => {
               transformOrigin: 'center center'
             }}
           >
-            <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+            <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid meet">
               <defs>
                 {/* Refined subtle glow filter */}
                 <filter id="glow-subtle" x="-20%" y="-20%" width="140%" height="140%">
@@ -607,6 +625,7 @@ export const EcosystemConstellation: React.FC = () => {
                     transform={`translate(${pos.x}, ${pos.y})`}
                     className="cursor-pointer select-none transition-all duration-700 ease-out"
                     onClick={() => { setActiveNodeId(node.id); setHoveredNodeId(node.id); }}
+                    onTouchStart={(e) => { e.stopPropagation(); setActiveNodeId(node.id); setHoveredNodeId(node.id); }}
                     onMouseEnter={() => setHoveredNodeId(node.id)}
                   >
                     {/* Active Reticle Hairline Aperture */}

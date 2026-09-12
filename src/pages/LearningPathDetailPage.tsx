@@ -43,7 +43,7 @@ export const LearningPathDetailPage: React.FC = () => {
       </button>
 
       {/* Hero Header */}
-      <div className="bg-white dark:bg-slate-900 rounded-3xl p-6 sm:p-10 border border-slate-200/80 dark:border-slate-800 shadow-xl space-y-6">
+      <div className="bg-white dark:bg-slate-900 rounded-3xl p-4 sm:p-8 lg:p-10 border border-slate-200/80 dark:border-slate-800 shadow-xl space-y-6">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
           <div className="space-y-2">
             <div className="flex flex-wrap items-center gap-2">
@@ -129,7 +129,7 @@ export const LearningPathDetailPage: React.FC = () => {
             return (
               <div
                 key={step.stepNumber}
-                className={`p-6 rounded-3xl border transition-all ${
+                className={`p-4 sm:p-6 rounded-3xl border transition-all ${
                   isCompleted
                     ? 'bg-emerald-50/40 dark:bg-emerald-950/20 border-emerald-500/40'
                     : 'bg-white dark:bg-slate-900 border-slate-200/80 dark:border-slate-800 shadow-sm'

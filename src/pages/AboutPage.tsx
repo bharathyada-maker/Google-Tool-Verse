@@ -60,7 +60,7 @@ export const AboutPage: React.FC = () => {
       </div>
 
       {/* Product Vision & Core Mission */}
-      <div className="bg-white dark:bg-slate-900 rounded-3xl p-6 sm:p-8 border border-slate-200/80 dark:border-slate-800 space-y-4 shadow-sm">
+      <div className="bg-white dark:bg-slate-900 rounded-3xl p-4 sm:p-6 lg:p-8 border border-slate-200/80 dark:border-slate-800 space-y-4 shadow-sm">
         <h2 className="text-xl font-black text-slate-900 dark:text-white">
           The Problem We Solve
         </h2>
@@ -105,7 +105,7 @@ export const AboutPage: React.FC = () => {
       </div>
 
       {/* Trademark Disclaimer */}
-      <div className="p-6 rounded-3xl bg-slate-50 dark:bg-slate-950/50 border border-slate-200 dark:border-slate-800 space-y-2 text-xs text-slate-500 leading-relaxed">
+      <div className="p-4 sm:p-6 rounded-3xl bg-slate-50 dark:bg-slate-950/50 border border-slate-200 dark:border-slate-800 space-y-2 text-xs text-slate-500 leading-relaxed">
         <h4 className="font-bold text-slate-700 dark:text-slate-300 text-xs uppercase tracking-wider">
           Legal & Trademark Disclaimer
         </h4>

@@ -41,7 +41,7 @@ export const LearningPathsPage: React.FC = () => {
             <div
               key={path.id}
               onClick={() => navigateToPath(path.id)}
-              className="group bg-white dark:bg-slate-900 rounded-3xl p-6 sm:p-8 border border-slate-200/80 dark:border-slate-800 hover:border-blue-500/40 dark:hover:border-blue-500/40 hover:shadow-xl transition-all duration-300 cursor-pointer flex flex-col justify-between"
+              className="group bg-white dark:bg-slate-900 rounded-3xl p-4 sm:p-6 lg:p-8 border border-slate-200/80 dark:border-slate-800 hover:border-blue-500/40 dark:hover:border-blue-500/40 hover:shadow-xl transition-all duration-300 cursor-pointer flex flex-col justify-between"
             >
               <div className="space-y-4">
                 <div className="flex items-start justify-between gap-3">

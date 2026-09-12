@@ -228,7 +228,7 @@ export const ComparePage: React.FC = () => {
             </button>
 
             {toolPickerOpen && (
-              <div className="absolute top-full left-0 mt-2 w-64 max-h-60 overflow-y-auto bg-white dark:bg-slate-900 rounded-2xl shadow-xl border border-slate-200 dark:border-slate-800 p-2 z-50">
+              <div className="absolute top-full right-0 sm:right-auto sm:left-0 mt-2 w-64 max-w-[calc(100vw-32px)] max-h-60 overflow-y-auto bg-white dark:bg-slate-900 rounded-2xl shadow-xl border border-slate-200 dark:border-slate-800 p-2 z-50">
                 {allTools.filter(t => !compareToolIds.includes(t.id)).map(t => (
                   <button
                     key={t.id}
@@ -256,13 +256,19 @@ export const ComparePage: React.FC = () => {
           </p>
         </div>
       ) : (
-        <div className="overflow-x-auto rounded-3xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 shadow-xl">
-          <table className="w-full text-left text-xs border-collapse">
-            <thead>
-              <tr className="border-b border-slate-200 dark:border-slate-800 bg-slate-50/70 dark:bg-slate-950/60">
-                <th className="p-4 w-48 text-slate-400 font-bold uppercase text-[11px] tracking-wider">
-                  Product Details
-                </th>
+        <div className="space-y-2">
+          {/* Mobile Swipe Hint */}
+          <div className="flex md:hidden items-center justify-end text-[11px] text-slate-500 dark:text-slate-400 font-semibold px-1">
+            <span>← Swipe horizontally to compare specs →</span>
+          </div>
+
+          <div className="overflow-x-auto rounded-3xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 shadow-xl touch-scroll">
+            <table className="w-full text-left text-xs border-collapse">
+              <thead>
+                <tr className="border-b border-slate-200 dark:border-slate-800 bg-slate-50/70 dark:bg-slate-950/60">
+                  <th className="p-4 w-40 sm:w-48 text-slate-400 font-bold uppercase text-[11px] tracking-wider sticky left-0 z-20 bg-slate-50 dark:bg-slate-950 sticky-col-shadow border-r border-slate-200 dark:border-slate-800">
+                    Product Details
+                  </th>
                 {selectedTools.map(tool => (
                   <th key={tool.id} className="p-4 min-w-[240px] align-top">
                     <div className="flex items-start justify-between gap-2 mb-2">
@@ -292,7 +298,7 @@ export const ComparePage: React.FC = () => {
             <tbody className="divide-y divide-slate-100 dark:divide-slate-800 text-slate-700 dark:text-slate-300">
               {/* Category */}
               <tr>
-                <td className="p-4 font-bold text-slate-400 text-[11px] uppercase tracking-wider bg-slate-50/40 dark:bg-slate-950/30">
+                <td className="p-4 w-40 sm:w-48 font-bold text-slate-500 dark:text-slate-400 text-[11px] uppercase tracking-wider bg-slate-50 dark:bg-slate-950 sticky left-0 z-10 sticky-col-shadow border-r border-slate-200 dark:border-slate-800">
                   Category
                 </td>
                 {selectedTools.map(tool => (
@@ -304,7 +310,7 @@ export const ComparePage: React.FC = () => {
 
               {/* Purpose / Core Vision */}
               <tr>
-                <td className="p-4 font-bold text-slate-400 text-[11px] uppercase tracking-wider bg-slate-50/40 dark:bg-slate-950/30">
+                <td className="p-4 w-40 sm:w-48 font-bold text-slate-500 dark:text-slate-400 text-[11px] uppercase tracking-wider bg-slate-50 dark:bg-slate-950 sticky left-0 z-10 sticky-col-shadow border-r border-slate-200 dark:border-slate-800">
                   Core Purpose
                 </td>
                 {selectedTools.map(tool => (
@@ -316,7 +322,7 @@ export const ComparePage: React.FC = () => {
 
               {/* Skill Level */}
               <tr>
-                <td className="p-4 font-bold text-slate-400 text-[11px] uppercase tracking-wider bg-slate-50/40 dark:bg-slate-950/30">
+                <td className="p-4 w-40 sm:w-48 font-bold text-slate-500 dark:text-slate-400 text-[11px] uppercase tracking-wider bg-slate-50 dark:bg-slate-950 sticky left-0 z-10 sticky-col-shadow border-r border-slate-200 dark:border-slate-800">
                   Skill Level
                 </td>
                 {selectedTools.map(tool => (
@@ -330,7 +336,7 @@ export const ComparePage: React.FC = () => {
 
               {/* Pricing & Free Tier */}
               <tr>
-                <td className="p-4 font-bold text-slate-400 text-[11px] uppercase tracking-wider bg-slate-50/40 dark:bg-slate-950/30">
+                <td className="p-4 w-40 sm:w-48 font-bold text-slate-500 dark:text-slate-400 text-[11px] uppercase tracking-wider bg-slate-50 dark:bg-slate-950 sticky left-0 z-10 sticky-col-shadow border-r border-slate-200 dark:border-slate-800">
                   Free Availability
                 </td>
                 {selectedTools.map(tool => (
@@ -343,7 +349,7 @@ export const ComparePage: React.FC = () => {
 
               {/* API Availability */}
               <tr>
-                <td className="p-4 font-bold text-slate-400 text-[11px] uppercase tracking-wider bg-slate-50/40 dark:bg-slate-950/30">
+                <td className="p-4 w-40 sm:w-48 font-bold text-slate-500 dark:text-slate-400 text-[11px] uppercase tracking-wider bg-slate-50 dark:bg-slate-950 sticky left-0 z-10 sticky-col-shadow border-r border-slate-200 dark:border-slate-800">
                   API & SDK Access
                 </td>
                 {selectedTools.map(tool => {
@@ -358,7 +364,7 @@ export const ComparePage: React.FC = () => {
 
               {/* Deployment Options */}
               <tr>
-                <td className="p-4 font-bold text-slate-400 text-[11px] uppercase tracking-wider bg-slate-50/40 dark:bg-slate-950/30">
+                <td className="p-4 w-40 sm:w-48 font-bold text-slate-500 dark:text-slate-400 text-[11px] uppercase tracking-wider bg-slate-50 dark:bg-slate-950 sticky left-0 z-10 sticky-col-shadow border-r border-slate-200 dark:border-slate-800">
                   Deployment Models
                 </td>
                 {selectedTools.map(tool => {
@@ -373,7 +379,7 @@ export const ComparePage: React.FC = () => {
 
               {/* Learning Curve */}
               <tr>
-                <td className="p-4 font-bold text-slate-400 text-[11px] uppercase tracking-wider bg-slate-50/40 dark:bg-slate-950/30">
+                <td className="p-4 w-40 sm:w-48 font-bold text-slate-500 dark:text-slate-400 text-[11px] uppercase tracking-wider bg-slate-50 dark:bg-slate-950 sticky left-0 z-10 sticky-col-shadow border-r border-slate-200 dark:border-slate-800">
                   Learning Curve
                 </td>
                 {selectedTools.map(tool => {
@@ -388,7 +394,7 @@ export const ComparePage: React.FC = () => {
 
               {/* Integration Ecosystem */}
               <tr>
-                <td className="p-4 font-bold text-slate-400 text-[11px] uppercase tracking-wider bg-slate-50/40 dark:bg-slate-950/30">
+                <td className="p-4 w-40 sm:w-48 font-bold text-slate-500 dark:text-slate-400 text-[11px] uppercase tracking-wider bg-slate-50 dark:bg-slate-950 sticky left-0 z-10 sticky-col-shadow border-r border-slate-200 dark:border-slate-800">
                   Ecosystem Synergy
                 </td>
                 {selectedTools.map(tool => {
@@ -403,7 +409,7 @@ export const ComparePage: React.FC = () => {
 
               {/* Recommended Use Case */}
               <tr>
-                <td className="p-4 font-bold text-slate-400 text-[11px] uppercase tracking-wider bg-slate-50/40 dark:bg-slate-950/30">
+                <td className="p-4 w-40 sm:w-48 font-bold text-slate-500 dark:text-slate-400 text-[11px] uppercase tracking-wider bg-slate-50 dark:bg-slate-950 sticky left-0 z-10 sticky-col-shadow border-r border-slate-200 dark:border-slate-800">
                   When to Choose
                 </td>
                 {selectedTools.map(tool => {
@@ -418,7 +424,7 @@ export const ComparePage: React.FC = () => {
 
               {/* Official Link */}
               <tr>
-                <td className="p-4 font-bold text-slate-400 text-[11px] uppercase tracking-wider bg-slate-50/40 dark:bg-slate-950/30">
+                <td className="p-4 w-40 sm:w-48 font-bold text-slate-500 dark:text-slate-400 text-[11px] uppercase tracking-wider bg-slate-50 dark:bg-slate-950 sticky left-0 z-10 sticky-col-shadow border-r border-slate-200 dark:border-slate-800">
                   Official Links
                 </td>
                 {selectedTools.map(tool => (
@@ -439,6 +445,7 @@ export const ComparePage: React.FC = () => {
             </tbody>
           </table>
         </div>
+      </div>
       )}
 
     </div>
