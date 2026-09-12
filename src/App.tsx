@@ -17,7 +17,7 @@ import { AboutPage } from './pages/AboutPage';
 import { Scale, ArrowRight, X } from 'lucide-react';
 
 const AppContent: React.FC = () => {
-  const { currentRoute, setCurrentRoute, compareToolIds, removeCompareTool, allTools } = useApp();
+  const { currentRoute, setCurrentRoute, compareToolIds, removeCompareTool, clearCompareTools, allTools } = useApp();
 
   const renderCurrentPage = () => {
     switch (currentRoute) {
@@ -83,13 +83,24 @@ const AppContent: React.FC = () => {
             ))}
           </div>
 
-          <button
-            onClick={() => setCurrentRoute('compare')}
-            className="px-3.5 py-1.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs flex items-center gap-1 shadow-sm cursor-pointer transition-colors"
-          >
-            <span>Compare Now</span>
-            <ArrowRight className="w-3 h-3" />
-          </button>
+          <div className="flex items-center gap-1.5 shrink-0">
+            <button
+              onClick={() => setCurrentRoute('compare')}
+              className="px-3.5 py-1.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs flex items-center gap-1 shadow-sm cursor-pointer transition-colors"
+            >
+              <span>Compare Now</span>
+              <ArrowRight className="w-3 h-3" />
+            </button>
+
+            <button
+              onClick={clearCompareTools}
+              title="Close & discard comparison"
+              aria-label="Close comparison window"
+              className="p-1.5 rounded-xl text-slate-400 hover:text-white hover:bg-slate-800 transition-colors cursor-pointer border border-slate-700/60 hover:border-slate-600 ml-0.5"
+            >
+              <X className="w-4 h-4" />
+            </button>
+          </div>
         </div>
       )}
 
