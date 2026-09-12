@@ -67,3 +67,15 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+/* Explicit search bar & dropdown panel dimensions */
+.navbar-search-wrapper {
+  min-width: 260px !important;
+  max-width: 460px !important;
+  flex: 1 1 auto !important;
+}
+
+.search-dropdown-panel {
+  width: 460px !important;
+  max-width: calc(100vw - 32px) !important;
+}
