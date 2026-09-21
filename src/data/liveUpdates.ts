@@ -11,10 +11,130 @@ export interface GoogleLiveUpdate {
   isRecent?: boolean;
 }
 
-export const LAST_SYNCED_TIMESTAMP = '2026-09-21T03:02:36.364Z';
+export const LAST_SYNCED_TIMESTAMP = '2026-09-21T11:17:29.485Z';
 export const SYNC_STATUS: 'ONLINE' | 'SYNCING' | 'MAINTENANCE' = 'ONLINE';
 
 export const LIVE_UPDATES_DATA: GoogleLiveUpdate[] = [
+  {
+    "id": "up-google-ai-studio-mub5i2fk-evds",
+    "toolId": "google-ai-studio",
+    "toolName": "Google Ai Studio",
+    "category": "AI & ML",
+    "title": "Why client SDK generation belongs in the open",
+    "summary": "Google has partnered with Speakeasy to open-source their OpenAPI code generation suite under the AGPLv3 license, a strategic move prompted by the sudden shutdown of Google's previo",
+    "pubDate": "2026-09-21",
+    "badge": "Feature Drop",
+    "officialUrl": "https://developers.googleblog.com/why-client-sdk-generation-belongs-in-the-open/",
+    "isRecent": true
+  },
+  {
+    "id": "up-gemini-mub5i2fk-4k2o",
+    "toolId": "gemini",
+    "toolName": "Gemini",
+    "category": "AI & ML",
+    "title": "Agent Anomaly Detection, now in Private Preview on the Gemini Enterprise Agent Platform",
+    "summary": "Agent Anomaly Detection is a new, out-of-band oversight layer for the Gemini Enterprise Agent Platform that analyzes OpenTelemetry traces and tool calls to catch behavioral risks w",
+    "pubDate": "2026-09-21",
+    "badge": "Feature Drop",
+    "officialUrl": "https://developers.googleblog.com/agent-anomaly-detection-now-in-private-preview-on-the-gemini-enterprise-agent-platform/",
+    "isRecent": true
+  },
+  {
+    "id": "up-gemini-mub5i2fk-siqj",
+    "toolId": "gemini",
+    "toolName": "Gemini",
+    "category": "AI & ML",
+    "title": "Build zero-trust AI agents that judge intent, not just syntax",
+    "summary": "This blog post explores how to transition AI agents from static, build-time security controls to dynamic runtime governance using the Gemini Enterprise Agent Platform. It highlight",
+    "pubDate": "2026-09-21",
+    "badge": "Feature Drop",
+    "officialUrl": "https://developers.googleblog.com/build-zero-trust-ai-agents-that-judge-intent-not-just-syntax/",
+    "isRecent": true
+  },
+  {
+    "id": "up-gemini-mub5i2fl-9zzr",
+    "toolId": "gemini",
+    "toolName": "Gemini",
+    "category": "AI & ML",
+    "title": "Driving Developer Excellence: Inside the Program Sprints",
+    "summary": "The Gemini Enterprise Developer Experience (DevEx) program conducts ongoing sprint testing of end-to-end developer workflows to identify and rapidly resolve friction points without",
+    "pubDate": "2026-09-21",
+    "badge": "Feature Drop",
+    "officialUrl": "https://developers.googleblog.com/driving-developer-excellence-inside-the-program-sprints/",
+    "isRecent": true
+  },
+  {
+    "id": "up-gemini-mub5i2fl-51bw",
+    "toolId": "gemini",
+    "toolName": "Gemini",
+    "category": "AI & ML",
+    "title": "Enterprise-Grade Precision for Long-Context Multimodal Embedding Inference on Cloud TPU",
+    "summary": "Google Cloud has natively integrated TPU support into the vLLM serving engine, allowing developers to elastically scale high-demand embedding pipelines using Google Kubernetes Engi",
+    "pubDate": "2026-09-21",
+    "badge": "Feature Drop",
+    "officialUrl": "https://developers.googleblog.com/enterprise-grade-precision-for-long-context-multimodal-embedding-inference-on-cloud-tpu/",
+    "isRecent": true
+  },
+  {
+    "id": "up-gemini-mub5i2oc-d1wu",
+    "toolId": "gemini",
+    "toolName": "Gemini",
+    "category": "Cloud",
+    "title": "Introducing Firebase spend caps",
+    "summary": "Spend caps are designed to act as a circuit breaker for services like the Gemini API and Cloud Functions, reducing the risk of a financial surprise from a simple coding error or an",
+    "pubDate": "2026-09-14",
+    "badge": "Feature Drop",
+    "officialUrl": "https://firebase.blog/posts/2026/09/firebase-spend-caps",
+    "isRecent": true
+  },
+  {
+    "id": "up-gemini-mub5i2oc-ehre",
+    "toolId": "gemini",
+    "toolName": "Gemini",
+    "category": "Cloud",
+    "title": "5 ways to use Gemini text-to-speech (TTS) in your apps with Firebase AI Logic",
+    "summary": "Official update published on Firebase Blog.",
+    "pubDate": "2026-09-09",
+    "badge": "Feature Drop",
+    "officialUrl": "https://firebase.blog/posts/2026/09/ai-logic-text-to-speech",
+    "isRecent": true
+  },
+  {
+    "id": "up-firebase-mub5i2od-l8b8",
+    "toolId": "firebase",
+    "toolName": "Firebase",
+    "category": "Cloud",
+    "title": "Authentication made easy: Building a secure e-commerce shopping cart with Firebase",
+    "summary": "Official update published on Firebase Blog.",
+    "pubDate": "2026-09-01",
+    "badge": "Feature Drop",
+    "officialUrl": "https://firebase.blog/posts/2026/09/secure-shopping-cart-firebase",
+    "isRecent": true
+  },
+  {
+    "id": "up-firebase-mub5i2od-o3ab",
+    "toolId": "firebase",
+    "toolName": "Firebase",
+    "category": "Cloud",
+    "title": "3 ways to optimize Firebase Remote Config fetch usage",
+    "summary": "Reduce network fetches, battery consumption and usage costs",
+    "pubDate": "2026-08-31",
+    "badge": "Feature Drop",
+    "officialUrl": "https://firebase.blog/posts/2026/08/optimize-remote-config-usage",
+    "isRecent": true
+  },
+  {
+    "id": "up-firebase-mub5i2od-n79m",
+    "toolId": "firebase",
+    "toolName": "Firebase",
+    "category": "Cloud",
+    "title": "Eval-driven development: How we build better agent skills for Firebase",
+    "summary": "How we build better agent skills for Firebase",
+    "pubDate": "2026-08-11",
+    "badge": "Feature Drop",
+    "officialUrl": "https://firebase.blog/posts/2026/08/eval-driven-development-agent-skills",
+    "isRecent": true
+  },
   {
     "id": "up-gemini-15-flash",
     "toolId": "gemini",
