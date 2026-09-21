@@ -2,6 +2,7 @@ import React, { useState, useMemo } from 'react';
 import { useApp } from '../context/AppContext';
 import { ToolCard } from '../components/ToolCard';
 import { CATEGORIES_DATA } from '../data/categoriesData';
+import { InteractiveIntentBlueprint, getMatchingIntent } from '../components/InteractiveIntentBlueprint';
 import { 
   Search, 
   Filter, 
@@ -31,6 +32,8 @@ export const CatalogPage: React.FC = () => {
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
   const [sortBy, setSortBy] = useState<'recommended' | 'name' | 'skill'>('recommended');
   const [quickFilter, setQuickFilter] = useState<'all' | 'free' | 'beginner' | 'trending'>('all');
+
+  const matchedIntent = useMemo(() => getMatchingIntent(searchQuery), [searchQuery]);
 
   // Filtered tools pipeline
   const filteredTools = useMemo(() => {
@@ -175,6 +178,14 @@ export const CatalogPage: React.FC = () => {
             </button>
           )}
         </div>
+
+        {/* Interactive Intent Blueprint Banner (When natural language query is matched) */}
+        {matchedIntent && (
+          <InteractiveIntentBlueprint
+            intent={matchedIntent}
+            onClear={() => setSearchQuery('')}
+          />
+        )}
 
         {/* Multi-facet Filter Pills */}
         <div className="w-full overflow-x-auto touch-scroll no-scrollbar py-1">

@@ -1,0 +1,29 @@
+{
+  "lastSyncAt": "2026-09-13T15:52:49.926Z",
+  "sourcesMonitored": 3,
+  "totalUpdatesCount": 43,
+  "status": "healthy",
+  "sources": [
+    {
+      "name": "Google AI & DeepMind Blog",
+      "url": "https://blog.google/innovation-and-ai/technology/ai/rss/",
+      "lastItemTitle": "3 ways to prep for your next big race with Search",
+      "lastItemDate": "2026-09-10",
+      "status": "ok"
+    },
+    {
+      "name": "Google Developer Tools Blog",
+      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/rss/",
+      "lastItemTitle": "The latest AI news we announced in August 2026",
+      "lastItemDate": "2026-09-01",
+      "status": "ok"
+    },
+    {
+      "name": "Google Cloud Release Notes",
+      "url": "https://docs.cloud.google.com/feeds/gcp-release-notes.xml",
+      "lastItemTitle": "September 11, 2026",
+      "lastItemDate": "2026-09-11",
+      "status": "ok"
+    }
+  ]
+}

@@ -1,0 +1,641 @@
+{
+  "metadata": {
+    "lastSyncAt": "2026-09-13T15:52:49.926Z",
+    "sourcesMonitored": 3,
+    "totalUpdatesCount": 43,
+    "status": "healthy",
+    "sources": [
+      {
+        "name": "Google AI & DeepMind Blog",
+        "url": "https://blog.google/innovation-and-ai/technology/ai/rss/",
+        "lastItemTitle": "3 ways to prep for your next big race with Search",
+        "lastItemDate": "2026-09-10",
+        "status": "ok"
+      },
+      {
+        "name": "Google Developer Tools Blog",
+        "url": "https://blog.google/innovation-and-ai/technology/developers-tools/rss/",
+        "lastItemTitle": "The latest AI news we announced in August 2026",
+        "lastItemDate": "2026-09-01",
+        "status": "ok"
+      },
+      {
+        "name": "Google Cloud Release Notes",
+        "url": "https://docs.cloud.google.com/feeds/gcp-release-notes.xml",
+        "lastItemTitle": "September 11, 2026",
+        "lastItemDate": "2026-09-11",
+        "status": "ok"
+      }
+    ]
+  },
+  "updates": [
+    {
+      "id": "update-vfujx7",
+      "title": "September 11, 2026",
+      "summary": "API Gateway Feature Enable Model Context Protocol (MCP) You can now configure API Gateway to act as a remote Model Context Protocol (MCP) server. This Public Preview feature allows you to expose your existing REST APIs to AI agents as tools, without requiring changes to your b...",
+      "url": "https://docs.cloud.google.com/release-notes#September_11_2026",
+      "source": "Google Cloud Release Notes",
+      "publishedAt": "2026-09-11",
+      "relatedToolIds": [
+        "google-cloud"
+      ],
+      "category": "Cloud & Developer Platforms",
+      "updateType": "Model Update",
+      "isNew": true
+    },
+    {
+      "id": "update-b5wk9r",
+      "title": "3 ways to prep for your next big race with Search",
+      "summary": "Search can help runners get race-day ready with registration alerts, tailored training plans, and more.",
+      "url": "https://blog.google/products-and-platforms/products/search/running-race-training-tips/",
+      "source": "Google AI & DeepMind Blog",
+      "publishedAt": "2026-09-10",
+      "relatedToolIds": [
+        "gemini"
+      ],
+      "category": "Search",
+      "updateType": "Announcement",
+      "isNew": true
+    },
+    {
+      "id": "update-vww6be",
+      "title": "September 10, 2026",
+      "summary": "Apigee X Fixed Addendum to Apigee release notes dated August 27, 2026 (1-18-0-apigee-4). Bug ID Description 502540992 Fixed an issue where the SemanticCacheLookup policy was incompatible with Vertex AI Vector Search Private Service Connect (PSC) endpoints. BigQuery Feature Con...",
+      "url": "https://docs.cloud.google.com/release-notes#September_10_2026",
+      "source": "Google Cloud Release Notes",
+      "publishedAt": "2026-09-10",
+      "relatedToolIds": [
+        "vertex-ai",
+        "bigquery"
+      ],
+      "category": "Cloud & Developer Platforms",
+      "updateType": "Release",
+      "isNew": true
+    },
+    {
+      "id": "update-vxm8d0",
+      "title": "Get ready for the game with new football features in Search",
+      "summary": "Track live game feeds, explore detailed stats, and get custom fantasy recommendations directly in Search this season.",
+      "url": "https://blog.google/products-and-platforms/products/search/football-features-google-search/",
+      "source": "Google AI & DeepMind Blog",
+      "publishedAt": "2026-09-09",
+      "relatedToolIds": [
+        "gemini"
+      ],
+      "category": "Search",
+      "updateType": "Release",
+      "isNew": true
+    },
+    {
+      "id": "update-g3r6o8",
+      "title": "Recreating a 70-year love story frame by frame",
+      "summary": "Discover how filmmakers and Google DeepMind used AI to recreate a couple's unrecorded past in the short film \"Love, Rendered.\"",
+      "url": "https://blog.google/innovation-and-ai/technology/ai/love-rendered-film/",
+      "source": "Google AI & DeepMind Blog",
+      "publishedAt": "2026-09-09",
+      "relatedToolIds": [
+        "gemini"
+      ],
+      "category": "Google DeepMind",
+      "updateType": "Release",
+      "isNew": true
+    },
+    {
+      "id": "update-sp86zg",
+      "title": "September 09, 2026",
+      "summary": "Apigee X Feature SemanticCacheLookup policy supports non-default Vector Search distance measures Available in Apigee 1-18-0-apigee-4 and later. A new optional element accepts DOT_PRODUCT_DISTANCE (the default, and the existing behavior), COSINE_DISTANCE , SQUARED_L2_DISTANCE a...",
+      "url": "https://docs.cloud.google.com/release-notes#September_09_2026",
+      "source": "Google Cloud Release Notes",
+      "publishedAt": "2026-09-09",
+      "relatedToolIds": [
+        "google-cloud"
+      ],
+      "category": "Cloud & Developer Platforms",
+      "updateType": "Model Update",
+      "isNew": true
+    },
+    {
+      "id": "update-s86kl9",
+      "title": "September 08, 2026",
+      "summary": "Agent Platform Workbench Fixed Scheduled upgrade metadata is validated The value of the notebook-upgrade-schedule metadata key is now validated when you create or update an Agent Platform Workbench instance. The value must be a single-line unix-cron format schedule. For more i...",
+      "url": "https://docs.cloud.google.com/release-notes#September_08_2026",
+      "source": "Google Cloud Release Notes",
+      "publishedAt": "2026-09-08",
+      "relatedToolIds": [
+        "google-cloud"
+      ],
+      "category": "Cloud & Developer Platforms",
+      "updateType": "Release",
+      "isNew": true
+    },
+    {
+      "id": "update-rr4y72",
+      "title": "September 07, 2026",
+      "summary": "AI Hypercomputer Security Google addressed a security vulnerability (CVE-2026-65107) that affects Slurm clusters. Based on the Google Cloud product that you used to create your Slurm cluster, see one of the following to mitigate the vulnerability: Security bulletin for Cluster...",
+      "url": "https://docs.cloud.google.com/release-notes#September_07_2026",
+      "source": "Google Cloud Release Notes",
+      "publishedAt": "2026-09-07",
+      "relatedToolIds": [
+        "google-cloud"
+      ],
+      "category": "Cloud & Developer Platforms",
+      "updateType": "Model Update",
+      "isNew": true
+    },
+    {
+      "id": "update-ra3bsv",
+      "title": "September 06, 2026",
+      "summary": "Google SecOps Feature [Spotlight Feature] Case playbooks This feature is in preview. Google SecOps now supports case playbooks. You can run playbooks or execute manual actions across an entire case container rather than individual alerts, consolidating response tasks and reduc...",
+      "url": "https://docs.cloud.google.com/release-notes#September_06_2026",
+      "source": "Google Cloud Release Notes",
+      "publishedAt": "2026-09-06",
+      "relatedToolIds": [
+        "google-cloud"
+      ],
+      "category": "Cloud & Developer Platforms",
+      "updateType": "Release",
+      "isNew": true
+    },
+    {
+      "id": "update-qt1peo",
+      "title": "September 05, 2026",
+      "summary": "Google SecOps SOAR Announcement Release 6.3.99 is now available for all regions.",
+      "url": "https://docs.cloud.google.com/release-notes#September_05_2026",
+      "source": "Google Cloud Release Notes",
+      "publishedAt": "2026-09-05",
+      "relatedToolIds": [
+        "google-cloud"
+      ],
+      "category": "Cloud & Developer Platforms",
+      "updateType": "Release",
+      "isNew": true
+    },
+    {
+      "id": "update-qc030h",
+      "title": "September 04, 2026",
+      "summary": "Audit Manager Feature The remote Model Context Protocol (MCP) server for Audit Manager is generally available ( GA ). Cloud Billing Change Introducing the Incentives page, for tracking spend-based milestone credits, RaMP, and other conditional incentives If you have a custom p...",
+      "url": "https://docs.cloud.google.com/release-notes#September_04_2026",
+      "source": "Google Cloud Release Notes",
+      "publishedAt": "2026-09-04",
+      "relatedToolIds": [
+        "google-cloud"
+      ],
+      "category": "Cloud & Developer Platforms",
+      "updateType": "Model Update",
+      "isNew": true
+    },
+    {
+      "id": "update-puygma",
+      "title": "September 03, 2026",
+      "summary": "API Gateway Change New model routing gateways might use a gateway.dev default hostname If you create a gateway that uses model routing on or after September 3, 2026, it might receive a gateway.dev default hostname instead of a run.app one, in the form https://GATEWAY_ID-PROJEC...",
+      "url": "https://docs.cloud.google.com/release-notes#September_03_2026",
+      "source": "Google Cloud Release Notes",
+      "publishedAt": "2026-09-03",
+      "relatedToolIds": [
+        "google-cloud"
+      ],
+      "category": "Cloud & Developer Platforms",
+      "updateType": "Model Update",
+      "isNew": true
+    },
+    {
+      "id": "update-lk1k5l",
+      "title": "Proactive cyber defense for governments and enterprises",
+      "summary": "The Fairwind Program is a limited access program for governments and trusted partners to use our cyber defense tools.",
+      "url": "https://blog.google/innovation-and-ai/technology/safety-security/fairwind-program/",
+      "source": "Google AI & DeepMind Blog",
+      "publishedAt": "2026-09-02",
+      "relatedToolIds": [
+        "gemini"
+      ],
+      "category": "Gemini models",
+      "updateType": "Model Update",
+      "isNew": true
+    },
+    {
+      "id": "update-pdwu83",
+      "title": "September 02, 2026",
+      "summary": "AlloyDB for PostgreSQL Feature AlloyDB real-time data access to BigQuery (in Preview ) now offers limit pushdown and runtime projects: Limit pushdown: when you query foreign tables, some LIMIT and OFFSET clauses are automatically pushed down to BigQuery, reducing network trans...",
+      "url": "https://docs.cloud.google.com/release-notes#September_02_2026",
+      "source": "Google Cloud Release Notes",
+      "publishedAt": "2026-09-02",
+      "relatedToolIds": [
+        "bigquery"
+      ],
+      "category": "Cloud & Developer Platforms",
+      "updateType": "Model Update",
+      "isNew": true
+    },
+    {
+      "id": "update-ldfs60",
+      "title": "The latest AI news we announced in August 2026",
+      "summary": "Here are Google’s latest AI updates from August 2026",
+      "url": "https://blog.google/innovation-and-ai/technology/google-ai-updates-august-2026/",
+      "source": "Google AI & DeepMind Blog",
+      "publishedAt": "2026-09-01",
+      "relatedToolIds": [
+        "gemini"
+      ],
+      "category": "Google DeepMind",
+      "updateType": "Feature",
+      "isNew": true
+    },
+    {
+      "id": "update-7pdp5q",
+      "title": "Try Google Pics: Easy image creation and editing in Google Workspace",
+      "summary": "Built on our latest Nano Banana model, Google Pics — our image creation and editing tool — is now available.",
+      "url": "https://blog.google/products-and-platforms/products/workspace/google-pics/",
+      "source": "Google AI & DeepMind Blog",
+      "publishedAt": "2026-09-01",
+      "relatedToolIds": [
+        "google-workspace"
+      ],
+      "category": "Google Workspace",
+      "updateType": "Model Update",
+      "isNew": true
+    },
+    {
+      "id": "update-owv7tw",
+      "title": "September 01, 2026",
+      "summary": "Apigee UI Announcement On September 1, 2026, we released an updated version of the Apigee UI. Fixed Bug ID Description 547582067 Revisions can now be imported for API proxies and shared flows in a space Importing a revision in the Apigee UI now works for an API proxy or shared...",
+      "url": "https://docs.cloud.google.com/release-notes#September_01_2026",
+      "source": "Google Cloud Release Notes",
+      "publishedAt": "2026-09-01",
+      "relatedToolIds": [
+        "google-cloud"
+      ],
+      "category": "Cloud & Developer Platforms",
+      "updateType": "Model Update",
+      "isNew": true
+    },
+    {
+      "id": "update-sodu2j",
+      "title": "Pairing Google Antigravity with Gemini 3.7 Flash solves notable multi-agent math and engineering problems.",
+      "summary": "Gemini 3.7 Flash powers autonomous agent teams in Antigravity to solve open math problems, build CPU emulators, and optimize OSS.",
+      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/antigravity-teamwork-multi-agent/",
+      "source": "Google Developer Tools Blog",
+      "publishedAt": "2026-08-31",
+      "relatedToolIds": [
+        "gemini"
+      ],
+      "category": "Developer tools",
+      "updateType": "Model Update",
+      "isNew": true
+    },
+    {
+      "id": "update-w821or",
+      "title": "August 31, 2026",
+      "summary": "BigQuery Feature You can now create, store , and manage pipelines in Git folders. This feature is in Preview . Feature BigQuery now supports TabFM , Google's pre-trained foundation model for tabular data. TabFM enables zero-shot regression and classification through in-context...",
+      "url": "https://docs.cloud.google.com/release-notes#August_31_2026",
+      "source": "Google Cloud Release Notes",
+      "publishedAt": "2026-08-31",
+      "relatedToolIds": [
+        "bigquery"
+      ],
+      "category": "Cloud & Developer Platforms",
+      "updateType": "Model Update",
+      "isNew": true
+    },
+    {
+      "id": "update-wp3o2y",
+      "title": "August 30, 2026",
+      "summary": "Agent Platform Workbench Change 20260830-2330-rc0 Release Change 20260831.01_p0 Release Change Installed latest packages from upstream dependencies. Change Installed latest packages from upstream dependencies. Fixed The terminal and file browser are now more responsive when wo...",
+      "url": "https://docs.cloud.google.com/release-notes#August_30_2026",
+      "source": "Google Cloud Release Notes",
+      "publishedAt": "2026-08-30",
+      "relatedToolIds": [
+        "google-cloud"
+      ],
+      "category": "Cloud & Developer Platforms",
+      "updateType": "Release",
+      "isNew": true
+    },
+    {
+      "id": "update-rx0p7w",
+      "title": "August 29, 2026",
+      "summary": "Google SecOps SOAR Announcement Release 6.3.98 is now available for all regions.",
+      "url": "https://docs.cloud.google.com/release-notes#August_29_2026",
+      "source": "Google Cloud Release Notes",
+      "publishedAt": "2026-08-29",
+      "relatedToolIds": [
+        "google-cloud"
+      ],
+      "category": "Cloud & Developer Platforms",
+      "updateType": "Release",
+      "isNew": true
+    },
+    {
+      "id": "update-rfz2tp",
+      "title": "August 28, 2026",
+      "summary": "Application Integration Announcement Upcoming authorization changes for integration runs Application Integration is updating how identities are handled for integration runs. Every run will act as either the person who triggered it or a run-as service account that you configure...",
+      "url": "https://docs.cloud.google.com/release-notes#August_28_2026",
+      "source": "Google Cloud Release Notes",
+      "publishedAt": "2026-08-28",
+      "relatedToolIds": [
+        "google-cloud"
+      ],
+      "category": "Cloud & Developer Platforms",
+      "updateType": "Release",
+      "isNew": true
+    },
+    {
+      "id": "update-nhozvr",
+      "title": "3 new ways to plan and book travel in Search",
+      "summary": "Book hotels and track airfares, plus view miles and rewards with AI Mode in Google Search.",
+      "url": "https://blog.google/products-and-platforms/products/search/book-travel-ai-mode/",
+      "source": "Google AI & DeepMind Blog",
+      "publishedAt": "2026-08-27",
+      "relatedToolIds": [
+        "gemini"
+      ],
+      "category": "Search",
+      "updateType": "Release",
+      "isNew": true
+    },
+    {
+      "id": "update-1wp93w",
+      "title": "Gemini Omni 1.1 Flash lets you build with more control",
+      "summary": "Gemini Omni 1.1 Flash brings a new suite of creative controls and generative video capabilities to developers.",
+      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/build-with-gemini-omni-1-1-flash/",
+      "source": "Google Developer Tools Blog",
+      "publishedAt": "2026-08-27",
+      "relatedToolIds": [
+        "gemini",
+        "veo"
+      ],
+      "category": "Gemini models",
+      "updateType": "Model Update",
+      "isNew": true
+    },
+    {
+      "id": "update-6kgzf6",
+      "title": "5 ways to upgrade your home decor with Google Search",
+      "summary": "Learn how to use Google Search tools to find home decor inspiration, shop for furniture, and tackle DIY projects.",
+      "url": "https://blog.google/products-and-platforms/products/search/home-decor-tips/",
+      "source": "Google AI & DeepMind Blog",
+      "publishedAt": "2026-08-25",
+      "relatedToolIds": [
+        "gemini"
+      ],
+      "category": "Search",
+      "updateType": "Model Update",
+      "isNew": true
+    },
+    {
+      "id": "update-90wpfs",
+      "title": "How developers build AI for good with Gemma 4",
+      "summary": "A look at the winning entries from the Gemma 4 Good Challenge.",
+      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/winning-entries-gemma-4-good-challenge/",
+      "source": "Google Developer Tools Blog",
+      "publishedAt": "2026-08-24",
+      "relatedToolIds": [
+        "gemma"
+      ],
+      "category": "Developer tools",
+      "updateType": "Release",
+      "isNew": true
+    },
+    {
+      "id": "update-82dja0",
+      "title": "Inside the Gemmaverse: Celebrating one billion Gemma downloads",
+      "summary": "A look at the Gemmaverse as Gemma surpasses one billion downloads.",
+      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemma-one-billion-downloads/",
+      "source": "Google Developer Tools Blog",
+      "publishedAt": "2026-08-20",
+      "relatedToolIds": [
+        "gemma"
+      ],
+      "category": "Developer tools",
+      "updateType": "Release",
+      "isNew": true
+    },
+    {
+      "id": "update-9v2sr0",
+      "title": "5 new ways to level up your learning with Search",
+      "summary": "Here’s how you can use Google Search tools to study for classes and standardized tests.",
+      "url": "https://blog.google/products-and-platforms/products/search/back-to-school-study-tools/",
+      "source": "Google AI & DeepMind Blog",
+      "publishedAt": "2026-08-19",
+      "relatedToolIds": [
+        "gemini"
+      ],
+      "category": "Learning & Education",
+      "updateType": "Release",
+      "isNew": true
+    },
+    {
+      "id": "update-70pq8q",
+      "title": "Get closer to the game with Gemini and Pixel",
+      "summary": "Google Gemini and Pixel partner with five global football clubs to elevate the fan matchday experience through AI and Smartphone Technology.",
+      "url": "https://blog.google/products-and-platforms/products/gemini/google-gemini-pixel-football-club-partnerships/",
+      "source": "Google AI & DeepMind Blog",
+      "publishedAt": "2026-08-17",
+      "relatedToolIds": [
+        "gemini"
+      ],
+      "category": "Gemini",
+      "updateType": "Release",
+      "isNew": true
+    },
+    {
+      "id": "update-gfya99",
+      "title": "Bring your spreadsheet data to life with Sheets canvas",
+      "summary": "Sheets canvas turns data into interactive dashboards, custom study trackers, seating charts, and more, all with a simple prompt.",
+      "url": "https://blog.google/products-and-platforms/products/workspace/sheets-canvas-for-google-sheets-spreadsheets/",
+      "source": "Google AI & DeepMind Blog",
+      "publishedAt": "2026-08-13",
+      "relatedToolIds": [
+        "gemini"
+      ],
+      "category": "Google Workspace",
+      "updateType": "Model Update",
+      "isNew": true
+    },
+    {
+      "id": "update-tqxm7z",
+      "title": "AMIE, our research medical AI system, demonstrates real-time clinical video consultation capabilities in a first-of-its-kind study.",
+      "summary": "Google introduces AMIE for real-time clinical video consultations in simulated settings.",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/google-research/amie-video-consultations/",
+      "source": "Google AI & DeepMind Blog",
+      "publishedAt": "2026-08-11",
+      "relatedToolIds": [
+        "gemini"
+      ],
+      "category": "Google Health",
+      "updateType": "Release",
+      "isNew": true
+    },
+    {
+      "id": "update-uat3rd",
+      "title": "Evolve your marketing with new AI tools",
+      "summary": "Learn how new AI and agentic experiences across Google Ads and Google Analytics can simplify your marketing workflow.",
+      "url": "https://blog.google/products/ads-commerce/google-ads-analytics-ai-updates/",
+      "source": "Google AI & DeepMind Blog",
+      "publishedAt": "2026-08-10",
+      "relatedToolIds": [
+        "gemini"
+      ],
+      "category": "Google Ads",
+      "updateType": "Release",
+      "isNew": true
+    },
+    {
+      "id": "update-68d2b2",
+      "title": "The latest AI news we announced in July 2026",
+      "summary": "Here are Google’s latest AI updates from July 2026",
+      "url": "https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-july-2026/",
+      "source": "Google AI & DeepMind Blog",
+      "publishedAt": "2026-08-04",
+      "relatedToolIds": [
+        "gemini"
+      ],
+      "category": "Search",
+      "updateType": "Feature",
+      "isNew": true
+    },
+    {
+      "id": "update-5xeta",
+      "title": "Inside our 353,000-person vibe coding course",
+      "summary": "Kaggle’s AI Agents Intensive with Google brought learners together in a no-cost course to build and deploy the next frontier of AI.",
+      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/ai-agents-intensive-recap-2026/",
+      "source": "Google AI & DeepMind Blog",
+      "publishedAt": "2026-08-03",
+      "relatedToolIds": [
+        "gemini"
+      ],
+      "category": "Gemini models",
+      "updateType": "Release",
+      "isNew": true
+    },
+    {
+      "id": "update-19o6xv",
+      "title": "Introducing Gemini Robotics ER 2",
+      "summary": "Gemini Robotics ER 2 is a step change in video understanding, tool orchestration, and multi-robot collaboration for robotic applications.",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/gemini-robotics-er-2/",
+      "source": "Google Developer Tools Blog",
+      "publishedAt": "2026-07-30",
+      "relatedToolIds": [
+        "gemini"
+      ],
+      "category": "Gemini models",
+      "updateType": "Release",
+      "isNew": true
+    },
+    {
+      "id": "update-um3nfn",
+      "title": "Gemini API Managed Agents: 3.6 Flash, hooks, and more",
+      "summary": "We’re announcing even more new capabilities in Managed Agents in Gemini API so developers can build reliable, production-ready agents.",
+      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/expanding-managed-agents-gemini-api-3-6-flash-hooks/",
+      "source": "Google Developer Tools Blog",
+      "publishedAt": "2026-07-28",
+      "relatedToolIds": [
+        "gemini",
+        "google-ai-studio"
+      ],
+      "category": "Developer tools",
+      "updateType": "Model Update",
+      "isNew": true
+    },
+    {
+      "id": "update-7on9pc",
+      "title": "We're rolling out AlphaEvolve widely to solve Google Cloud customers' hardest problems.",
+      "summary": "Finding the most efficient algorithm — whether designing a microchip, routing a logistics network or accelerating medical research — can be challenging, with many possib…",
+      "url": "https://blog.google/innovation-and-ai/infrastructure-and-cloud/google-cloud/alphaevolve-on-cloud/",
+      "source": "Google Developer Tools Blog",
+      "publishedAt": "2026-07-09",
+      "relatedToolIds": [
+        "google-cloud"
+      ],
+      "category": "Google Cloud",
+      "updateType": "Model Update",
+      "isNew": false
+    },
+    {
+      "id": "update-5lwbs8",
+      "title": "Expanding Managed Agents in Gemini API: background tasks, remote MCP and more",
+      "summary": "We’re announcing new capabilities in Managed Agents in Gemini API so developers can build reliable, production-ready agents.",
+      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/expanding-managed-agents-gemini-api/",
+      "source": "Google Developer Tools Blog",
+      "publishedAt": "2026-07-07",
+      "relatedToolIds": [
+        "gemini",
+        "google-ai-studio"
+      ],
+      "category": "Developer tools",
+      "updateType": "Model Update",
+      "isNew": false
+    },
+    {
+      "id": "update-t1pmpw",
+      "title": "The latest AI news we announced in June 2026",
+      "summary": "Here are Google’s latest AI updates from June 2026.",
+      "url": "https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-june-2026/",
+      "source": "Google Developer Tools Blog",
+      "publishedAt": "2026-07-01",
+      "relatedToolIds": [
+        "google-ai-studio"
+      ],
+      "category": "Search",
+      "updateType": "Feature",
+      "isNew": false
+    },
+    {
+      "id": "update-8hk5sj",
+      "title": "Ask an AI expert: What exactly is the full stack?",
+      "summary": "A Google expert explains what it means to take a full-stack approach to AI and why it’s been the foundation of our AI work for so long.",
+      "url": "https://blog.google/innovation-and-ai/technology/ai/full-stack-ai-explainer/",
+      "source": "Google Developer Tools Blog",
+      "publishedAt": "2026-06-29",
+      "relatedToolIds": [
+        "google-ai-studio"
+      ],
+      "category": "Developer tools",
+      "updateType": "Model Update",
+      "isNew": false
+    },
+    {
+      "id": "update-3spcav",
+      "title": "Interactions API: our primary interface for Gemini models and agents",
+      "summary": "Google’s Interactions API is a unified interface for interacting with Gemini models and agents.",
+      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/interactions-api-general-availability/",
+      "source": "Google Developer Tools Blog",
+      "publishedAt": "2026-06-22",
+      "relatedToolIds": [
+        "gemini"
+      ],
+      "category": "Developer tools",
+      "updateType": "Model Update",
+      "isNew": false
+    },
+    {
+      "id": "update-6jiotq",
+      "title": "DiffusionGemma: 4x faster text generation",
+      "summary": "An overview of DiffusionGemma, an exceptionally fast text generation model with up to 4x faster speeds.",
+      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/diffusion-gemma-faster-text-generation/",
+      "source": "Google Developer Tools Blog",
+      "publishedAt": "2026-06-10",
+      "relatedToolIds": [
+        "gemma",
+        "imagen"
+      ],
+      "category": "Developer tools",
+      "updateType": "Model Update",
+      "isNew": false
+    },
+    {
+      "id": "update-kmyc1v",
+      "title": "See what 3 builders are making with Gemma 4",
+      "summary": "Here’s how three creators are building with Gemma 4, our latest and most advanced family of generative AI open models.",
+      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemma-4-builders/",
+      "source": "Google Developer Tools Blog",
+      "publishedAt": "2026-06-09",
+      "relatedToolIds": [
+        "gemma",
+        "youtube-studio"
+      ],
+      "category": "Developer tools",
+      "updateType": "Model Update",
+      "isNew": false
+    }
+  ]
+}

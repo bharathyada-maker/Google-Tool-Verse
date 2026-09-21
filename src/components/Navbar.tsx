@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useApp } from '../context/AppContext';
+import { LiveEcosystemRadar } from './LiveEcosystemRadar';
 import { 
   Search, 
   Bookmark, 
@@ -14,7 +15,8 @@ import {
   X, 
   ShieldCheck, 
   Info,
-  Workflow
+  Workflow,
+  Radio
 } from 'lucide-react';
 
 export const Navbar: React.FC = () => {
@@ -27,11 +29,13 @@ export const Navbar: React.FC = () => {
     compareToolIds,
     isDarkMode,
     toggleDarkMode,
+    navigateToTool
   } = useApp();
 
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [searchFocused, setSearchFocused] = useState(false);
   const [mobileSearchFocused, setMobileSearchFocused] = useState(false);
+  const [isRadarOpen, setIsRadarOpen] = useState(false);
   const searchContainerRef = useRef<HTMLDivElement>(null);
   const mobileSearchContainerRef = useRef<HTMLDivElement>(null);
 
@@ -284,6 +288,16 @@ export const Navbar: React.FC = () => {
 
           {/* Right Action Icons */}
           <div className="flex items-center gap-1.5 shrink-0">
+            {/* Live Ecosystem Radar Beacon */}
+            <button
+              onClick={() => setIsRadarOpen(true)}
+              className="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-emerald-500/10 hover:bg-emerald-500/20 border border-emerald-500/30 text-emerald-600 dark:text-emerald-400 font-mono text-[11px] font-semibold transition-all cursor-pointer shadow-sm hover:scale-105"
+              title="Google Living Ecosystem Radar - Live Feed"
+            >
+              <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+              <span className="hidden sm:inline">Live Synced</span>
+            </button>
+
             {/* Admin Portal - hidden on small screens, accessible in mobile drawer */}
             <button
               onClick={() => setCurrentRoute('admin')}
@@ -327,7 +341,8 @@ export const Navbar: React.FC = () => {
 
         </div>
 
-        {/* Mobile Search Bar Row */}
+        {/* Mobile Search Bar Row (Only shown when not already on catalog page to avoid duplicate search inputs) */}
+        {currentRoute !== 'catalog' && (
         <div ref={mobileSearchContainerRef} className="py-2.5 md:hidden border-t border-slate-100 dark:border-slate-800 relative">
           <form onSubmit={handleSearchSubmit} className="relative">
             <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
@@ -383,6 +398,7 @@ export const Navbar: React.FC = () => {
             </div>
           )}
         </div>
+        )}
       </div>
 
       {/* Mobile Menu Drawer */}
@@ -460,6 +476,13 @@ export const Navbar: React.FC = () => {
           </button>
         </div>
       )}
+
+      {/* Live Ecosystem Radar Modal */}
+      <LiveEcosystemRadar
+        isOpen={isRadarOpen}
+        onClose={() => setIsRadarOpen(false)}
+        onNavigateToTool={navigateToTool}
+      />
     </header>
   );
 };

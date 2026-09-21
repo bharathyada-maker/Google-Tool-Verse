@@ -160,3 +160,31 @@ export interface DiscrepancyReport {
   submittedAt: string;
   status: 'Pending' | 'Verified' | 'Dismissed';
 }
+
+export interface GoogleLiveUpdate {
+  id: string;
+  title: string;
+  summary: string;
+  url: string;
+  source: string; // e.g. 'Google AI Blog', 'Google Developers', 'Google Cloud', 'GitHub Releases'
+  publishedAt: string;
+  relatedToolIds: string[];
+  category: string;
+  updateType: 'Release' | 'Feature' | 'Model Update' | 'Announcement' | 'Deprecation';
+  isNew?: boolean;
+}
+
+export interface SyncMetadata {
+  lastSyncAt: string;
+  sourcesMonitored: number;
+  totalUpdatesCount: number;
+  status: 'healthy' | 'updating' | 'error';
+  sources: {
+    name: string;
+    url: string;
+    lastItemTitle?: string;
+    lastItemDate?: string;
+    status: 'ok' | 'error';
+  }[];
+}
+

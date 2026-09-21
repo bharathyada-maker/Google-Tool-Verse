@@ -1,0 +1,58 @@
+name: Google Ecosystem Continuous Live Sync
+
+on:
+  schedule:
+    # Runs every 6 hours automatically to ensure a living, breathing ecosystem
+    - cron: '0 */6 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: 'live-sync'
+  cancel-in-progress: true
+
+jobs:
+  sync-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Run Google Ecosystem Sync
+        run: node scripts/sync-google-updates.mjs
+
+      - name: Commit and Push Updates if Detected
+        run: |
+          git config --global user.name "Google Toolverse Sync Bot"
+          git config --global user.email "bot@googletoolverse.internal"
+          if [[ -n $(git status --porcelain src/data/liveUpdates.ts) ]]; then
+            git add src/data/liveUpdates.ts
+            git commit -m "chore(sync): automated update with latest Google releases"
+            git push origin main
+          else
+            echo "No new updates detected. Data is current."
+          fi
+
+      - name: Build Application
+        run: npm run build
+
+      - name: Deploy to GitHub Pages
+        run: npx gh-pages -d dist -u "Google Toolverse Sync Bot <bot@googletoolverse.internal>"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
