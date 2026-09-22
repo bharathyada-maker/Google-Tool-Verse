@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useApp } from '../context/AppContext';
 import { EcosystemConstellation } from '../components/EcosystemConstellation';
 import { ToolCard } from '../components/ToolCard';
 import { GeminiDemo } from '../components/InteractiveDemos';
+import { CATEGORIES_DATA } from '../data/categoriesData';
+import { LAST_SYNCED_TIMESTAMP } from '../data/liveUpdates';
+import { LiveEcosystemRadar } from '../components/LiveEcosystemRadar';
 import { 
   Compass, 
   Sparkles, 
@@ -28,6 +31,17 @@ export const HomePage: React.FC = () => {
     setSearchQuery, 
     navigateToTool 
   } = useApp();
+
+  const [isRadarOpen, setIsRadarOpen] = useState(false);
+
+  const formatSyncTime = (iso: string) => {
+    try {
+      const d = new Date(iso);
+      return d.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }) + ' today';
+    } catch {
+      return 'Active';
+    }
+  };
 
   const trendingTools = allTools.filter(t => t.isTrending).slice(0, 4);
   const beginnerTools = allTools.filter(t => t.skillLevel === 'Beginner').slice(0, 4);
@@ -148,23 +162,142 @@ export const HomePage: React.FC = () => {
           </button>
         </div>
 
-        {/* Stats ticker */}
-        <div className="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-2xl mx-auto pt-6 border-t border-slate-200 dark:border-slate-800 text-left">
-          <div>
-            <div className="text-2xl font-black text-slate-900 dark:text-white">40+</div>
-            <div className="text-xs text-slate-500">Verified Products</div>
+        {/* Dynamic Site Telemetry Dashboard */}
+        <div className="mt-10 max-w-3xl mx-auto pt-6 border-t border-slate-200 dark:border-slate-800 space-y-4">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 text-left">
+            
+            {/* 1. Dynamic Verified Products */}
+            <button
+              onClick={() => setCurrentRoute('catalog')}
+              className="p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-900/80 hover:bg-blue-50/60 dark:hover:bg-slate-800 border border-slate-200/80 dark:border-slate-800 hover:border-blue-300 dark:hover:border-blue-600 transition-all text-left cursor-pointer group shadow-sm"
+              title="Explore all verified Google products"
+            >
+              <div className="flex items-center justify-between">
+                <span className="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                  {allTools.length}
+                </span>
+                <span className="text-[10px] font-bold px-1.5 py-0.5 rounded-full bg-blue-100 dark:bg-blue-900/50 text-blue-700 dark:text-blue-300">
+                  Live
+                </span>
+              </div>
+              <div className="text-xs font-semibold text-slate-700 dark:text-slate-300 mt-0.5">Verified Products</div>
+              <div className="text-[10px] text-slate-400 mt-0.5 truncate">
+                {allTools.filter(t => t.skillLevel === 'Beginner').length} beginner • {allTools.filter(t => t.pricingType.includes('Free')).length} free
+              </div>
+            </button>
+
+            {/* 2. Dynamic Categories */}
+            <button
+              onClick={() => setCurrentRoute('categories')}
+              className="p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-900/80 hover:bg-blue-50/60 dark:hover:bg-slate-800 border border-slate-200/80 dark:border-slate-800 hover:border-blue-300 dark:hover:border-blue-600 transition-all text-left cursor-pointer group shadow-sm"
+              title="Browse tools by category"
+            >
+              <div className="flex items-center justify-between">
+                <span className="text-2xl sm:text-3xl font-black text-blue-600 dark:text-blue-400">
+                  {CATEGORIES_DATA.length}
+                </span>
+                <span className="text-[10px] font-bold px-1.5 py-0.5 rounded-full bg-blue-100 dark:bg-blue-900/50 text-blue-700 dark:text-blue-300">
+                  Pillars
+                </span>
+              </div>
+              <div className="text-xs font-semibold text-slate-700 dark:text-slate-300 mt-0.5">Core Categories</div>
+              <div className="text-[10px] text-slate-400 mt-0.5 truncate">
+                AI, Cloud, Dev, Data & more
+              </div>
+            </button>
+
+            {/* 3. Dynamic Interactive Simulators & Flows */}
+            <button
+              onClick={() => setCurrentRoute('how-it-works')}
+              className="p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-900/80 hover:bg-blue-50/60 dark:hover:bg-slate-800 border border-slate-200/80 dark:border-slate-800 hover:border-blue-300 dark:hover:border-blue-600 transition-all text-left cursor-pointer group shadow-sm"
+              title="Inspect interactive simulators and architectural flows"
+            >
+              <div className="flex items-center justify-between">
+                <span className="text-2xl sm:text-3xl font-black text-amber-500 dark:text-amber-400">
+                  {allTools.filter(t => t.howItWorks).length}
+                </span>
+                <span className="text-[10px] font-bold px-1.5 py-0.5 rounded-full bg-amber-100 dark:bg-amber-900/50 text-amber-700 dark:text-amber-300">
+                  4 Demos
+                </span>
+              </div>
+              <div className="text-xs font-semibold text-slate-700 dark:text-slate-300 mt-0.5">Interactive Flows</div>
+              <div className="text-[10px] text-slate-400 mt-0.5 truncate">
+                Clickable system architectures
+              </div>
+            </button>
+
+            {/* 4. Dynamic Live Sync Telemetry */}
+            <button
+              onClick={() => setIsRadarOpen(true)}
+              className="p-3.5 rounded-2xl bg-emerald-500/5 dark:bg-emerald-950/20 hover:bg-emerald-500/10 border border-emerald-500/20 hover:border-emerald-500/40 transition-all text-left cursor-pointer group shadow-sm"
+              title="Open Google Living Ecosystem Radar"
+            >
+              <div className="flex items-center justify-between">
+                <div className="flex items-center gap-1.5">
+                  <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse" />
+                  <span className="text-xs sm:text-sm font-black text-emerald-600 dark:text-emerald-400">
+                    Live Synced
+                  </span>
+                </div>
+                <span className="text-[10px] font-mono text-emerald-600 dark:text-emerald-400 font-bold">
+                  6h Cron
+                </span>
+              </div>
+              <div className="text-xs font-semibold text-slate-700 dark:text-slate-300 mt-1">Official Radar</div>
+              <div className="text-[10px] text-emerald-600/80 dark:text-emerald-400/80 mt-0.5 font-mono truncate">
+                Updated {formatSyncTime(LAST_SYNCED_TIMESTAMP)}
+              </div>
+            </button>
           </div>
-          <div>
-            <div className="text-2xl font-black text-blue-600 dark:text-blue-400">7</div>
-            <div className="text-xs text-slate-500">Core Categories</div>
-          </div>
-          <div>
-            <div className="text-2xl font-black text-emerald-600 dark:text-emerald-400">100%</div>
-            <div className="text-xs text-slate-500">Official Google Links</div>
-          </div>
-          <div>
-            <div className="text-2xl font-black text-amber-500">4</div>
-            <div className="text-xs text-slate-500">Interactive Simulators</div>
+
+          {/* Dynamic Filter Pills */}
+          <div className="flex flex-wrap items-center justify-center gap-1.5 text-xs pt-1">
+            <span className="text-[11px] font-semibold text-slate-400 dark:text-slate-500 mr-1">Quick Filters:</span>
+            <button
+              onClick={() => { setSelectedCategory('ai-ml'); setCurrentRoute('catalog'); }}
+              className="px-2.5 py-1 rounded-xl bg-slate-100 dark:bg-slate-800/80 hover:bg-blue-50 dark:hover:bg-blue-900/30 text-slate-700 dark:text-slate-300 hover:text-blue-600 text-[11px] font-medium transition-colors cursor-pointer flex items-center gap-1"
+            >
+              <span>🤖 AI & ML</span>
+              <span className="font-bold text-slate-400 dark:text-slate-500">
+                ({allTools.filter(t => t.category.includes('Artificial Intelligence')).length})
+              </span>
+            </button>
+            <button
+              onClick={() => { setSelectedCategory('cloud-platforms'); setCurrentRoute('catalog'); }}
+              className="px-2.5 py-1 rounded-xl bg-slate-100 dark:bg-slate-800/80 hover:bg-blue-50 dark:hover:bg-blue-900/30 text-slate-700 dark:text-slate-300 hover:text-blue-600 text-[11px] font-medium transition-colors cursor-pointer flex items-center gap-1"
+            >
+              <span>☁️ Cloud & Compute</span>
+              <span className="font-bold text-slate-400 dark:text-slate-500">
+                ({allTools.filter(t => t.category.includes('Cloud')).length})
+              </span>
+            </button>
+            <button
+              onClick={() => { setSelectedCategory('software-dev'); setCurrentRoute('catalog'); }}
+              className="px-2.5 py-1 rounded-xl bg-slate-100 dark:bg-slate-800/80 hover:bg-blue-50 dark:hover:bg-blue-900/30 text-slate-700 dark:text-slate-300 hover:text-blue-600 text-[11px] font-medium transition-colors cursor-pointer flex items-center gap-1"
+            >
+              <span>💻 Software & Dev</span>
+              <span className="font-bold text-slate-400 dark:text-slate-500">
+                ({allTools.filter(t => t.category.includes('Software')).length})
+              </span>
+            </button>
+            <button
+              onClick={() => { setSelectedCategory('data-analytics'); setCurrentRoute('catalog'); }}
+              className="px-2.5 py-1 rounded-xl bg-slate-100 dark:bg-slate-800/80 hover:bg-blue-50 dark:hover:bg-blue-900/30 text-slate-700 dark:text-slate-300 hover:text-blue-600 text-[11px] font-medium transition-colors cursor-pointer flex items-center gap-1"
+            >
+              <span>🗄️ Data & Storage</span>
+              <span className="font-bold text-slate-400 dark:text-slate-500">
+                ({allTools.filter(t => t.category.includes('Data')).length})
+              </span>
+            </button>
+            <button
+              onClick={() => { setCurrentRoute('catalog'); }}
+              className="px-2.5 py-1 rounded-xl bg-slate-100 dark:bg-slate-800/80 hover:bg-blue-50 dark:hover:bg-blue-900/30 text-slate-700 dark:text-slate-300 hover:text-blue-600 text-[11px] font-medium transition-colors cursor-pointer flex items-center gap-1"
+            >
+              <span>✨ Free Tier</span>
+              <span className="font-bold text-slate-400 dark:text-slate-500">
+                ({allTools.filter(t => t.pricingType.includes('Free')).length})
+              </span>
+            </button>
           </div>
         </div>
       </section>
@@ -405,6 +538,13 @@ export const HomePage: React.FC = () => {
           </button>
         </div>
       </section>
+
+      {/* Live Ecosystem Radar Modal */}
+      <LiveEcosystemRadar
+        isOpen={isRadarOpen}
+        onClose={() => setIsRadarOpen(false)}
+        onNavigateToTool={navigateToTool}
+      />
 
     </div>
   );
