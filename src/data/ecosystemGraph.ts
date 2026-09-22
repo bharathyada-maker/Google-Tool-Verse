@@ -43,10 +43,19 @@ export const ECOSYSTEM_NODES: EcosystemNode[] = [
 
   // Productivity & Web
   { id: 'google-workspace', name: 'Workspace', category: 'Productivity', x: 72, y: 28, size: 22, color: '#4285F4', description: 'Cloud-native productivity suite' },
+  { id: 'google-vids', name: 'Google Vids', category: 'AI & ML', x: 60, y: 30, size: 20, color: '#1A73E8', description: 'AI-powered video creation in Workspace' },
   { id: 'google-docs', name: 'Google Docs', category: 'Productivity', x: 86, y: 22, size: 18, color: '#4285F4', description: 'Real-time collaborative word processor' },
   { id: 'google-sheets', name: 'Google Sheets', category: 'Productivity', x: 65, y: 78, size: 20, color: '#34A853', description: 'Collaborative spreadsheets connected to BigQuery' },
   { id: 'chrome-devtools', name: 'DevTools', category: 'Web', x: 86, y: 38, size: 18, color: '#EA4335', description: 'Web debugging tools in Chrome' },
-  { id: 'lighthouse', name: 'Lighthouse', category: 'Web', x: 92, y: 62, size: 18, color: '#4285F4', description: 'Automated web quality & performance auditing' }
+  { id: 'lighthouse', name: 'Lighthouse', category: 'Web', x: 92, y: 62, size: 18, color: '#4285F4', description: 'Automated web quality & performance auditing' },
+
+  // New Core Flagships: Development, Deployment, Storage
+  { id: 'project-idx', name: 'Project IDX', category: 'Dev', x: 78, y: 48, size: 22, color: '#4285F4', description: 'AI-assisted cloud multiplatform IDE' },
+  { id: 'go-lang', name: 'Go (Golang)', category: 'Dev', x: 92, y: 76, size: 20, color: '#00ADD8', description: 'High-concurrency systems programming language' },
+  { id: 'compute-engine', name: 'Compute Engine', category: 'Cloud', x: 14, y: 55, size: 22, color: '#4285F4', description: 'Scalable enterprise virtual machines' },
+  { id: 'cloud-functions', name: 'Cloud Functions', category: 'Cloud', x: 46, y: 64, size: 20, color: '#4285F4', description: 'Event-driven serverless functions' },
+  { id: 'cloud-spanner', name: 'Cloud Spanner', category: 'Data', x: 22, y: 88, size: 22, color: '#4285F4', description: 'Unlimited scale globally distributed SQL' },
+  { id: 'cloud-sql', name: 'Cloud SQL', category: 'Data', x: 38, y: 90, size: 20, color: '#4285F4', description: 'Managed MySQL, PostgreSQL & SQL Server' }
 ];
 
 export const ECOSYSTEM_EDGES: EcosystemEdge[] = [
@@ -56,18 +65,24 @@ export const ECOSYSTEM_EDGES: EcosystemEdge[] = [
   { source: 'gemini', target: 'vertex-ai', relationship: 'Enterprise governance & private VPC tuning' },
   { source: 'gemini', target: 'notebooklm', relationship: 'Powers grounded research & audio overviews' },
   { source: 'gemini', target: 'gemma', relationship: 'Open-weights architecture inspired by Gemini' },
+  { source: 'gemini', target: 'google-vids', relationship: 'Powers AI storyboards, scripts & voiceovers' },
+  { source: 'gemini', target: 'project-idx', relationship: 'Integrated Gemini Code Assist in cloud IDE' },
   { source: 'tensorflow', target: 'vertex-ai', relationship: 'Custom training pipelines on TPUs/GPUs' },
 
   // Cloud & Integration Connections
   { source: 'vertex-ai', target: 'google-cloud', relationship: 'Native enterprise GCP cloud service' },
+  { source: 'google-cloud', target: 'compute-engine', relationship: 'Foundational IaaS virtual machine infrastructure' },
   { source: 'google-cloud', target: 'cloud-run', relationship: 'Managed serverless container service' },
   { source: 'google-cloud', target: 'kubernetes-engine', relationship: 'Enterprise Kubernetes orchestration' },
   { source: 'google-cloud', target: 'cloud-storage', relationship: 'Unified object storage foundation' },
+  { source: 'google-cloud', target: 'cloud-functions', relationship: 'Event-driven serverless execution' },
   { source: 'cloud-run', target: 'firebase', relationship: 'Powers serverless backend triggers' },
   { source: 'google-ai-studio', target: 'firebase', relationship: 'Export prompt code to web & mobile backends' },
 
-  // Data Pipeline Connections
+  // Data Pipeline & Storage Connections
   { source: 'google-cloud', target: 'bigquery', relationship: 'Managed enterprise analytical warehouse' },
+  { source: 'google-cloud', target: 'cloud-spanner', relationship: 'Mission-critical 99.999% global SQL' },
+  { source: 'google-cloud', target: 'cloud-sql', relationship: 'Managed relational MySQL & PostgreSQL' },
   { source: 'cloud-storage', target: 'bigquery', relationship: 'Direct batch and external table querying' },
   { source: 'bigquery', target: 'looker-studio', relationship: 'Native zero-code interactive BI reporting' },
   { source: 'bigquery', target: 'google-sheets', relationship: 'Connected Sheets analyzing billions of rows' },
@@ -75,11 +90,14 @@ export const ECOSYSTEM_EDGES: EcosystemEdge[] = [
   // Mobile & App Development
   { source: 'flutter', target: 'dart', relationship: 'Language foundation of Flutter framework' },
   { source: 'flutter', target: 'android-studio', relationship: 'Official IDE tooling, emulation & debugging' },
+  { source: 'flutter', target: 'project-idx', relationship: 'Full-stack cloud IDE with live Android emulator' },
   { source: 'flutter', target: 'firebase', relationship: 'FlutterFire official auth & Firestore SDKs' },
   { source: 'android-studio', target: 'firebase', relationship: 'Crashlytics, FCM notifications & cloud storage' },
+  { source: 'go-lang', target: 'cloud-run', relationship: 'Fast, lightweight container microservices' },
 
   // Productivity & AI
   { source: 'gemini', target: 'google-workspace', relationship: 'Powers Gemini in Docs, Gmail & Slides' },
+  { source: 'google-workspace', target: 'google-vids', relationship: 'Collaborative AI video creation app' },
   { source: 'google-workspace', target: 'google-docs', relationship: 'Core document co-authoring tool' },
   { source: 'google-workspace', target: 'google-sheets', relationship: 'Cloud-native spreadsheet program' },
   { source: 'chrome-devtools', target: 'lighthouse', relationship: 'Built-in automated audit tab' }

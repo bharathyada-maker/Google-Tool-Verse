@@ -50,12 +50,12 @@ export const CatalogPage: React.FC = () => {
         const matchCategory = tool.category.toLowerCase().includes(q);
 
         // Natural language query mapping
-        const isChatbotQuery = q.includes('chatbot') && (tool.id === 'gemini' || tool.id === 'google-ai-studio' || tool.id === 'vertex-ai' || tool.id === 'firebase');
-        const isDatabaseQuery = q.includes('database') && (tool.id === 'bigquery' || tool.id === 'firebase' || tool.id === 'cloud-storage');
-        const isWebsiteQuery = (q.includes('website') || q.includes('web app')) && (tool.id === 'firebase' || tool.id === 'cloud-run' || tool.id === 'angular');
-        const isMobileQuery = (q.includes('mobile') || q.includes('android')) && (tool.id === 'flutter' || tool.id === 'android-studio' || tool.id === 'jetpack-compose' || tool.id === 'firebase');
-        const isDeployQuery = q.includes('deploy') && (tool.id === 'cloud-run' || tool.id === 'google-cloud' || tool.id === 'kubernetes-engine' || tool.id === 'firebase');
-        const isDataQuery = (q.includes('analyse') || q.includes('data') || q.includes('analytics')) && (tool.id === 'bigquery' || tool.id === 'looker-studio' || tool.id === 'google-sheets' || tool.id === 'google-analytics');
+        const isChatbotQuery = (q.includes('chatbot') || q.includes('chat bot') || q.includes('assistant')) && (tool.id === 'gemini' || tool.id === 'google-ai-studio' || tool.id === 'vertex-ai' || tool.id === 'firebase' || tool.id === 'vertex-agent-builder');
+        const isDatabaseQuery = (q.includes('database') || q.includes('storage') || q.includes('sql') || q.includes('nosql')) && (tool.id === 'bigquery' || tool.id === 'firebase' || tool.id === 'cloud-storage' || tool.id === 'cloud-spanner' || tool.id === 'cloud-sql' || tool.id === 'cloud-firestore' || tool.id === 'cloud-bigtable' || tool.id === 'alloydb' || tool.id === 'memorystore');
+        const isWebsiteQuery = (q.includes('website') || q.includes('web app')) && (tool.id === 'firebase' || tool.id === 'cloud-run' || tool.id === 'angular' || tool.id === 'firebase-hosting' || tool.id === 'project-idx');
+        const isMobileQuery = (q.includes('mobile') || q.includes('android') || q.includes('ios')) && (tool.id === 'flutter' || tool.id === 'android-studio' || tool.id === 'jetpack-compose' || tool.id === 'firebase' || tool.id === 'android-jetpack' || tool.id === 'google-play-console' || tool.id === 'project-idx');
+        const isDeployQuery = (q.includes('deploy') || q.includes('hosting') || q.includes('cloud')) && (tool.id === 'cloud-run' || tool.id === 'google-cloud' || tool.id === 'kubernetes-engine' || tool.id === 'firebase' || tool.id === 'compute-engine' || tool.id === 'cloud-functions' || tool.id === 'cloud-build' || tool.id === 'cloud-deploy' || tool.id === 'firebase-hosting' || tool.id === 'cloud-load-balancing');
+        const isDataQuery = (q.includes('analyse') || q.includes('data') || q.includes('analytics')) && (tool.id === 'bigquery' || tool.id === 'looker-studio' || tool.id === 'google-sheets' || tool.id === 'google-analytics' || tool.id === 'cloud-spanner' || tool.id === 'cloud-bigtable' || tool.id === 'cloud-sql' || tool.id === 'alloydb');
 
         if (!(matchName || matchTagline || matchOverview || matchProblem || matchCapabilities || matchBestFor || matchCategory || isChatbotQuery || isDatabaseQuery || isWebsiteQuery || isMobileQuery || isDeployQuery || isDataQuery)) {
           return false;

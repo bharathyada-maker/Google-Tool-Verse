@@ -1,7 +1,8 @@
 import { GoogleTool } from '../types';
 import { ADDITIONAL_TOOLS } from './additionalTools';
+import { EXPANDED_TOOLS } from './expandedTools';
 
-export { ADDITIONAL_TOOLS };
+export { ADDITIONAL_TOOLS, EXPANDED_TOOLS };
 
 export const TOOLS_DATA: GoogleTool[] = [
   // ==================== ARTIFICIAL INTELLIGENCE & MACHINE LEARNING ====================
@@ -1495,4 +1496,4 @@ export const TOOLS_DATA: GoogleTool[] = [
   }
 ];
 
-export const ALL_TOOLS: GoogleTool[] = [...TOOLS_DATA, ...ADDITIONAL_TOOLS];
+export const ALL_TOOLS: GoogleTool[] = [...TOOLS_DATA, ...ADDITIONAL_TOOLS, ...EXPANDED_TOOLS];
