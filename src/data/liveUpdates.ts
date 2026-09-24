@@ -11,10 +11,22 @@ export interface GoogleLiveUpdate {
   isRecent?: boolean;
 }
 
-export const LAST_SYNCED_TIMESTAMP = '2026-09-23T15:41:45.090Z';
+export const LAST_SYNCED_TIMESTAMP = '2026-09-24T01:57:20.228Z';
 export const SYNC_STATUS: 'ONLINE' | 'SYNCING' | 'MAINTENANCE' = 'ONLINE';
 
 export const LIVE_UPDATES_DATA: GoogleLiveUpdate[] = [
+  {
+    "id": "up-gemini-muevt967-eo9s",
+    "toolId": "gemini",
+    "toolName": "Gemini",
+    "category": "AI & ML",
+    "title": "Introducing Support for Local AI Models in the Antigravity SDK",
+    "summary": "The Google Antigravity SDK now empowers developers to execute offline, agentic workflows locally using models like Gemma 4 26B A4B via LiteRT. This update facilitates powerful hybr",
+    "pubDate": "2026-09-24",
+    "badge": "Feature Drop",
+    "officialUrl": "https://developers.googleblog.com/introducing-support-for-local-ai-models-in-the-antigravity-sdk/",
+    "isRecent": true
+  },
   {
     "id": "up-google-ai-studio-mub5i2fk-evds",
     "toolId": "google-ai-studio",
