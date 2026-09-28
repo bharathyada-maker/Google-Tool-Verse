@@ -11,10 +11,34 @@ export interface GoogleLiveUpdate {
   isRecent?: boolean;
 }
 
-export const LAST_SYNCED_TIMESTAMP = '2026-09-28T12:12:44.657Z';
+export const LAST_SYNCED_TIMESTAMP = '2026-09-28T22:42:29.699Z';
 export const SYNC_STATUS: 'ONLINE' | 'SYNCING' | 'MAINTENANCE' = 'ONLINE';
 
 export const LIVE_UPDATES_DATA: GoogleLiveUpdate[] = [
+  {
+    "id": "up-firebase-mulu1ygy-o5ys",
+    "toolId": "firebase",
+    "toolName": "Firebase",
+    "category": "Cloud",
+    "title": "The Firebase plugin is now available in Codex",
+    "summary": "The Firebase agent plugin provides access to Firebase agent skills, the Firebase MCP server, and the Firebase CLI, giving Codex the ability to build Firebase-powered apps with less",
+    "pubDate": "2026-09-28",
+    "badge": "Feature Drop",
+    "officialUrl": "https://firebase.blog/posts/2026/09/firebase-plugin-for-codex",
+    "isRecent": true
+  },
+  {
+    "id": "up-firebase-mulu1ygy-70t1",
+    "toolId": "firebase",
+    "toolName": "Firebase",
+    "category": "Cloud",
+    "title": "New regions and networks: Firebase Phone Number Verification adds more networks",
+    "summary": "Official update published on Firebase Blog.",
+    "pubDate": "2026-09-28",
+    "badge": "Feature Drop",
+    "officialUrl": "https://firebase.blog/posts/2026/09/firebase-pnv-more-networks",
+    "isRecent": true
+  },
   {
     "id": "up-gemini-muevt967-eo9s",
     "toolId": "gemini",
