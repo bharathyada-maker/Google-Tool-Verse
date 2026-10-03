@@ -11,10 +11,22 @@ export interface GoogleLiveUpdate {
   isRecent?: boolean;
 }
 
-export const LAST_SYNCED_TIMESTAMP = '2026-10-02T21:31:06.801Z';
+export const LAST_SYNCED_TIMESTAMP = '2026-10-03T02:39:33.746Z';
 export const SYNC_STATUS: 'ONLINE' | 'SYNCING' | 'MAINTENANCE' = 'ONLINE';
 
 export const LIVE_UPDATES_DATA: GoogleLiveUpdate[] = [
+  {
+    "id": "up-firebase-mursa8hd-5o4a",
+    "toolId": "firebase",
+    "toolName": "Firebase",
+    "category": "Cloud",
+    "title": "Google Analytics for Firebase iOS SDK outage on September 28, 2026",
+    "summary": "Google&apos;s response to the Firebase iOS SDK outage on September 28, 2026.",
+    "pubDate": "2026-10-02",
+    "badge": "Feature Drop",
+    "officialUrl": "https://firebase.blog/posts/2026/10/firebase-analytics-outage",
+    "isRecent": true
+  },
   {
     "id": "up-firebase-mulu1ygy-o5ys",
     "toolId": "firebase",
@@ -241,18 +253,6 @@ export const LIVE_UPDATES_DATA: GoogleLiveUpdate[] = [
     "pubDate": "2025-05-15",
     "badge": "SDK Update",
     "officialUrl": "https://medium.com/flutter/whats-new-in-flutter-3-22-6b998cfb6b15",
-    "isRecent": true
-  },
-  {
-    "id": "up-notebooklm-audio-overviews",
-    "toolId": "notebooklm",
-    "toolName": "NotebookLM",
-    "category": "AI & ML",
-    "title": "Deep Research Audio Overviews with Conversational AI Hosts",
-    "summary": "NotebookLM introduced conversational 2-host audio podcasts generated entirely from user-uploaded PDFs, research papers, and lecture notes.",
-    "pubDate": "2025-05-02",
-    "badge": "Feature Drop",
-    "officialUrl": "https://blog.google/technology/ai/notebooklm-audio-overviews/",
     "isRecent": true
   }
 ];
