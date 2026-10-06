@@ -11,10 +11,34 @@ export interface GoogleLiveUpdate {
   isRecent?: boolean;
 }
 
-export const LAST_SYNCED_TIMESTAMP = '2026-10-06T12:20:41.650Z';
+export const LAST_SYNCED_TIMESTAMP = '2026-10-06T21:57:48.822Z';
 export const SYNC_STATUS: 'ONLINE' | 'SYNCING' | 'MAINTENANCE' = 'ONLINE';
 
 export const LIVE_UPDATES_DATA: GoogleLiveUpdate[] = [
+  {
+    "id": "up-gemini-mux7zatc-o1fz",
+    "toolId": "gemini",
+    "toolName": "Gemini",
+    "category": "AI & ML",
+    "title": "Bring multimodal semantic search to the edge with EmbeddingGemma 2",
+    "summary": "EmbeddingGemma 2 is a new 740M open-weight multimodal model that maps text, images, video, and audio into a unified vector space for privacy-first, on-device retrieval. Developers ",
+    "pubDate": "2026-10-06",
+    "badge": "Feature Drop",
+    "officialUrl": "https://developers.googleblog.com/google-ai-edge-with-embeddinggemma-2/",
+    "isRecent": true
+  },
+  {
+    "id": "up-gemini-mux7zatc-9nze",
+    "toolId": "gemini",
+    "toolName": "Gemini",
+    "category": "AI & ML",
+    "title": "EmbeddingGemma 2: The Developer Guide",
+    "summary": "EmbeddingGemma 2 is a compact, open-source multimodal embedding model that maps text, code, images, video, and audio into a unified 768-dimensional space. Developers can use the se",
+    "pubDate": "2026-10-06",
+    "badge": "Feature Drop",
+    "officialUrl": "https://developers.googleblog.com/embeddinggemma-2-the-developer-guide/",
+    "isRecent": true
+  },
   {
     "id": "up-firebase-mursa8hd-5o4a",
     "toolId": "firebase",
@@ -229,30 +253,6 @@ export const LIVE_UPDATES_DATA: GoogleLiveUpdate[] = [
     "pubDate": "2025-05-28",
     "badge": "Architecture",
     "officialUrl": "https://cloud.google.com/blog/products/serverless/cloud-run-gpu-support-ai-inference",
-    "isRecent": true
-  },
-  {
-    "id": "up-bigquery-gemini-models",
-    "toolId": "bigquery",
-    "toolName": "BigQuery",
-    "category": "Data",
-    "title": "BigQuery Gemini Multimodal SQL Functions (ML.GENERATE_TEXT)",
-    "summary": "Execute generative multimodal analysis directly within BigQuery SQL over petabyte datasets using native ML.GENERATE_TEXT integrated with Gemini 1.5.",
-    "pubDate": "2025-05-20",
-    "badge": "Feature Drop",
-    "officialUrl": "https://cloud.google.com/blog/products/data-analytics/bigquery-gemini-multimodal-analytics",
-    "isRecent": true
-  },
-  {
-    "id": "up-flutter-wasm",
-    "toolId": "flutter",
-    "toolName": "Flutter",
-    "category": "Dev",
-    "title": "Flutter WebAssembly (Wasm) Compilation & Impeller Engine for Android",
-    "summary": "Flutter 3.22 delivers production WebAssembly compilation for up to 3x faster web frame rates and full Vulkan Impeller rendering on Android.",
-    "pubDate": "2025-05-15",
-    "badge": "SDK Update",
-    "officialUrl": "https://medium.com/flutter/whats-new-in-flutter-3-22-6b998cfb6b15",
     "isRecent": true
   }
 ];
