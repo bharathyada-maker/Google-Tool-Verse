@@ -11,10 +11,22 @@ export interface GoogleLiveUpdate {
   isRecent?: boolean;
 }
 
-export const LAST_SYNCED_TIMESTAMP = '2026-10-08T12:22:49.992Z';
+export const LAST_SYNCED_TIMESTAMP = '2026-10-08T22:35:21.487Z';
 export const SYNC_STATUS: 'ONLINE' | 'SYNCING' | 'MAINTENANCE' = 'ONLINE';
 
 export const LIVE_UPDATES_DATA: GoogleLiveUpdate[] = [
+  {
+    "id": "up-firebase-mv047aq6-hux4",
+    "toolId": "firebase",
+    "toolName": "Firebase",
+    "category": "Cloud",
+    "title": "Building an iOS app in 6 hours with Firebase and Antigravity",
+    "summary": "We built a production-ready iOS app with Firebase, including authentication, Firestore, Cloud Messaging, Cloud Functions and App Check, in just six hours using Google&apos;s Antigr",
+    "pubDate": "2026-10-08",
+    "badge": "Feature Drop",
+    "officialUrl": "https://firebase.blog/posts/2026/09/build-ios-app-firebase-antigravity",
+    "isRecent": true
+  },
   {
     "id": "up-gemini-mux7zatc-o1fz",
     "toolId": "gemini",
@@ -241,18 +253,6 @@ export const LIVE_UPDATES_DATA: GoogleLiveUpdate[] = [
     "pubDate": "2025-06-05",
     "badge": "SDK Update",
     "officialUrl": "https://firebase.blog/posts/2024/05/introducing-genkit/",
-    "isRecent": true
-  },
-  {
-    "id": "up-cloud-run-gpus",
-    "toolId": "cloud-run",
-    "toolName": "Cloud Run",
-    "category": "Cloud",
-    "title": "NVIDIA GPU Acceleration on Cloud Run for Serverless AI Inference",
-    "summary": "Cloud Run now supports NVIDIA L4 GPUs with scale-to-zero capability, allowing teams to deploy custom open-weights LLMs like Gemma with pay-as-you-go pricing.",
-    "pubDate": "2025-05-28",
-    "badge": "Architecture",
-    "officialUrl": "https://cloud.google.com/blog/products/serverless/cloud-run-gpu-support-ai-inference",
     "isRecent": true
   }
 ];
