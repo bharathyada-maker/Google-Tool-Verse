@@ -11,10 +11,34 @@ export interface GoogleLiveUpdate {
   isRecent?: boolean;
 }
 
-export const LAST_SYNCED_TIMESTAMP = '2026-10-13T13:04:49.993Z';
+export const LAST_SYNCED_TIMESTAMP = '2026-10-13T22:02:38.859Z';
 export const SYNC_STATUS: 'ONLINE' | 'SYNCING' | 'MAINTENANCE' = 'ONLINE';
 
 export const LIVE_UPDATES_DATA: GoogleLiveUpdate[] = [
+  {
+    "id": "up-gemini-mv788hhb-wo3a",
+    "toolId": "gemini",
+    "toolName": "Gemini",
+    "category": "AI & ML",
+    "title": "Gemini 4 Argon for Robotics",
+    "summary": "Gemini 4 Argon is a general-purpose physical reasoning model designed to enhance workflows across the robotics stack with advanced capabilities in physical understanding, code gene",
+    "pubDate": "2026-10-13",
+    "badge": "Feature Drop",
+    "officialUrl": "https://developers.googleblog.com/gemini-4-argon-for-robotics/",
+    "isRecent": true
+  },
+  {
+    "id": "up-gemini-mv788hhc-efyy",
+    "toolId": "gemini",
+    "toolName": "Gemini",
+    "category": "AI & ML",
+    "title": "Optimizing a 200,000-line Python codebase overnight with Gemini 4 Argon",
+    "summary": "How our engineering team ran Gemini 4 Argon unattended overnight with .agents/skills and /goal mode to cut in-memory session prep overhead by 40% in long sessions and speed up cold",
+    "pubDate": "2026-10-13",
+    "badge": "Feature Drop",
+    "officialUrl": "https://developers.googleblog.com/optimizing-a-200000-line-python-codebase-overnight-with-gemini-4-argon/",
+    "isRecent": true
+  },
   {
     "id": "up-firebase-mv047aq6-hux4",
     "toolId": "firebase",
@@ -229,30 +253,6 @@ export const LIVE_UPDATES_DATA: GoogleLiveUpdate[] = [
     "pubDate": "2025-06-18",
     "badge": "Model Release",
     "officialUrl": "https://blog.google/technology/ai/google-gemini-next-generation-model-february-2024/",
-    "isRecent": true
-  },
-  {
-    "id": "up-ai-studio-system-instructions",
-    "toolId": "google-ai-studio",
-    "toolName": "Google AI Studio",
-    "category": "AI & ML",
-    "title": "Structured Outputs & JSON Schema Enforcement in AI Studio",
-    "summary": "Developers can now enforce strict JSON schema contracts directly within Google AI Studio for function calling and deterministic structured data extraction.",
-    "pubDate": "2025-06-10",
-    "badge": "Feature Drop",
-    "officialUrl": "https://developers.googleblog.com/en/gemini-structured-outputs-json-schema/",
-    "isRecent": true
-  },
-  {
-    "id": "up-firebase-studio-genkit",
-    "toolId": "firebase",
-    "toolName": "Firebase",
-    "category": "Cloud",
-    "title": "Firebase Genkit & Serverless AI Integration Suite",
-    "summary": "Firebase announced native Genkit support for building full-stack AI workflows with Firestore vector search, automated telemetry, and Gemini streaming.",
-    "pubDate": "2025-06-05",
-    "badge": "SDK Update",
-    "officialUrl": "https://firebase.blog/posts/2024/05/introducing-genkit/",
     "isRecent": true
   }
 ];
