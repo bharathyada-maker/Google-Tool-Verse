@@ -11,10 +11,22 @@ export interface GoogleLiveUpdate {
   isRecent?: boolean;
 }
 
-export const LAST_SYNCED_TIMESTAMP = '2026-10-15T10:29:06.218Z';
+export const LAST_SYNCED_TIMESTAMP = '2026-10-15T15:53:23.425Z';
 export const SYNC_STATUS: 'ONLINE' | 'SYNCING' | 'MAINTENANCE' = 'ONLINE';
 
 export const LIVE_UPDATES_DATA: GoogleLiveUpdate[] = [
+  {
+    "id": "up-gemini-mv9pxblm-uyjq",
+    "toolId": "gemini",
+    "toolName": "Gemini",
+    "category": "AI & ML",
+    "title": "Evaluating AI agents: moving past the vibe check",
+    "summary": "A practical engineering guide and reference architecture for establishing continuous evaluation pipelines for multi-turn AI agents using Gemini Enterprise Agent Platform, Google AD",
+    "pubDate": "2026-10-15",
+    "badge": "Feature Drop",
+    "officialUrl": "https://developers.googleblog.com/evaluating-ai-agents-moving-past-the-vibe-check/",
+    "isRecent": true
+  },
   {
     "id": "up-gemini-mv788hhb-wo3a",
     "toolId": "gemini",
@@ -241,18 +253,6 @@ export const LIVE_UPDATES_DATA: GoogleLiveUpdate[] = [
     "pubDate": "2026-08-11",
     "badge": "Feature Drop",
     "officialUrl": "https://firebase.blog/posts/2026/08/eval-driven-development-agent-skills",
-    "isRecent": true
-  },
-  {
-    "id": "up-gemini-15-flash",
-    "toolId": "gemini",
-    "toolName": "Gemini 1.5 Flash",
-    "category": "AI & ML",
-    "title": "Gemini 1.5 Flash Production Release & Rate Limit Upgrades",
-    "summary": "Google upgraded Gemini 1.5 Flash with sub-second response times, 1M token context window by default, and multimodal audio/video streaming APIs.",
-    "pubDate": "2025-06-18",
-    "badge": "Model Release",
-    "officialUrl": "https://blog.google/technology/ai/google-gemini-next-generation-model-february-2024/",
     "isRecent": true
   }
 ];
