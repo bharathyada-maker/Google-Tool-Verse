@@ -11,10 +11,22 @@ export interface GoogleLiveUpdate {
   isRecent?: boolean;
 }
 
-export const LAST_SYNCED_TIMESTAMP = '2026-10-19T11:26:14.528Z';
+export const LAST_SYNCED_TIMESTAMP = '2026-10-19T17:52:55.324Z';
 export const SYNC_STATUS: 'ONLINE' | 'SYNCING' | 'MAINTENANCE' = 'ONLINE';
 
 export const LIVE_UPDATES_DATA: GoogleLiveUpdate[] = [
+  {
+    "id": "up-gemini-mvfjyfuh-d77m",
+    "toolId": "gemini",
+    "toolName": "Gemini",
+    "category": "AI & ML",
+    "title": "Step by Step guide: Build a Voice Agent That Never Goes Silent using ADK",
+    "summary": "The open-source Agent Development Kit (ADK) and gemini-3.8-live enable developers to build responsive voice agents by implementing non-blocking tools in Python. Developers can use ",
+    "pubDate": "2026-10-19",
+    "badge": "Feature Drop",
+    "officialUrl": "https://developers.googleblog.com/step-by-step-guide-build-a-voice-agent-that-never-goes-silent-using-adk/",
+    "isRecent": true
+  },
   {
     "id": "up-gemini-mv9pxblm-uyjq",
     "toolId": "gemini",
@@ -241,18 +253,6 @@ export const LIVE_UPDATES_DATA: GoogleLiveUpdate[] = [
     "pubDate": "2026-08-31",
     "badge": "Feature Drop",
     "officialUrl": "https://firebase.blog/posts/2026/08/optimize-remote-config-usage",
-    "isRecent": true
-  },
-  {
-    "id": "up-firebase-mub5i2od-n79m",
-    "toolId": "firebase",
-    "toolName": "Firebase",
-    "category": "Cloud",
-    "title": "Eval-driven development: How we build better agent skills for Firebase",
-    "summary": "How we build better agent skills for Firebase",
-    "pubDate": "2026-08-11",
-    "badge": "Feature Drop",
-    "officialUrl": "https://firebase.blog/posts/2026/08/eval-driven-development-agent-skills",
     "isRecent": true
   }
 ];
