@@ -11,10 +11,22 @@ export interface GoogleLiveUpdate {
   isRecent?: boolean;
 }
 
-export const LAST_SYNCED_TIMESTAMP = '2026-10-22T16:12:11.520Z';
+export const LAST_SYNCED_TIMESTAMP = '2026-10-22T20:56:33.812Z';
 export const SYNC_STATUS: 'ONLINE' | 'SYNCING' | 'MAINTENANCE' = 'ONLINE';
 
 export const LIVE_UPDATES_DATA: GoogleLiveUpdate[] = [
+  {
+    "id": "up-gemini-mvk0u5zs-06p0",
+    "toolId": "gemini",
+    "toolName": "Gemini",
+    "category": "AI & ML",
+    "title": "Architecting Governed, Self-Evolving AI Agents on Google Cloud",
+    "summary": "Learn how Project Chrysalis combines Google Cloud's Gemini Enterprise Agent Platform, Agent Development Kit (ADK), BigQuery, and a four-gate defense-in-depth security stack (Model ",
+    "pubDate": "2026-10-22",
+    "badge": "Feature Drop",
+    "officialUrl": "https://developers.googleblog.com/architecting-governed-self-evolving-ai-agents-on-gemini-agent-platform/",
+    "isRecent": true
+  },
   {
     "id": "up-gemini-mvfjyfuh-d77m",
     "toolId": "gemini",
@@ -241,18 +253,6 @@ export const LIVE_UPDATES_DATA: GoogleLiveUpdate[] = [
     "pubDate": "2026-09-01",
     "badge": "Feature Drop",
     "officialUrl": "https://firebase.blog/posts/2026/09/secure-shopping-cart-firebase",
-    "isRecent": true
-  },
-  {
-    "id": "up-firebase-mub5i2od-o3ab",
-    "toolId": "firebase",
-    "toolName": "Firebase",
-    "category": "Cloud",
-    "title": "3 ways to optimize Firebase Remote Config fetch usage",
-    "summary": "Reduce network fetches, battery consumption and usage costs",
-    "pubDate": "2026-08-31",
-    "badge": "Feature Drop",
-    "officialUrl": "https://firebase.blog/posts/2026/08/optimize-remote-config-usage",
     "isRecent": true
   }
 ];
