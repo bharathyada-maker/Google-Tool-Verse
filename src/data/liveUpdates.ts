@@ -11,10 +11,22 @@ export interface GoogleLiveUpdate {
   isRecent?: boolean;
 }
 
-export const LAST_SYNCED_TIMESTAMP = '2026-10-26T11:44:30.979Z';
+export const LAST_SYNCED_TIMESTAMP = '2026-10-26T17:47:33.512Z';
 export const SYNC_STATUS: 'ONLINE' | 'SYNCING' | 'MAINTENANCE' = 'ONLINE';
 
 export const LIVE_UPDATES_DATA: GoogleLiveUpdate[] = [
+  {
+    "id": "up-google-workspace-mvpjuigl-t61i",
+    "toolId": "google-workspace",
+    "toolName": "Google Workspace",
+    "category": "AI & ML",
+    "title": "Preview, edit, and collaborate on markdown (.md) files natively in Google Docs and Drive",
+    "summary": "Google Workspace now offers native support for Markdown (.md) files, allowing developers and AI agents to seamlessly collaborate on documentation directly in Google Docs without ma",
+    "pubDate": "2026-10-26",
+    "badge": "Feature Drop",
+    "officialUrl": "https://developers.googleblog.com/preview-edit-and-collaborate-on-markdown-md-files-natively-in-google-docs-and-drive/",
+    "isRecent": true
+  },
   {
     "id": "up-gemini-mvk0u5zs-06p0",
     "toolId": "gemini",
@@ -241,18 +253,6 @@ export const LIVE_UPDATES_DATA: GoogleLiveUpdate[] = [
     "pubDate": "2026-09-09",
     "badge": "Feature Drop",
     "officialUrl": "https://firebase.blog/posts/2026/09/ai-logic-text-to-speech",
-    "isRecent": true
-  },
-  {
-    "id": "up-firebase-mub5i2od-l8b8",
-    "toolId": "firebase",
-    "toolName": "Firebase",
-    "category": "Cloud",
-    "title": "Authentication made easy: Building a secure e-commerce shopping cart with Firebase",
-    "summary": "Official update published on Firebase Blog.",
-    "pubDate": "2026-09-01",
-    "badge": "Feature Drop",
-    "officialUrl": "https://firebase.blog/posts/2026/09/secure-shopping-cart-firebase",
     "isRecent": true
   }
 ];
