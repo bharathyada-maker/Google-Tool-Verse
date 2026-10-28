@@ -11,10 +11,22 @@ export interface GoogleLiveUpdate {
   isRecent?: boolean;
 }
 
-export const LAST_SYNCED_TIMESTAMP = '2026-10-28T17:32:01.591Z';
+export const LAST_SYNCED_TIMESTAMP = '2026-10-28T21:57:47.928Z';
 export const SYNC_STATUS: 'ONLINE' | 'SYNCING' | 'MAINTENANCE' = 'ONLINE';
 
 export const LIVE_UPDATES_DATA: GoogleLiveUpdate[] = [
+  {
+    "id": "up-google-ai-studio-mvsno0xu-lh9w",
+    "toolId": "google-ai-studio",
+    "toolName": "Google Ai Studio",
+    "category": "AI & ML",
+    "title": "Hill-Climbing Agent Quality with Agents CLI Evaluation",
+    "summary": "This post walks through the Agents CLI evaluation loop for systematically improving agent performance through continuous testing and grading. It demonstrates how to catch prompt re",
+    "pubDate": "2026-10-28",
+    "badge": "Feature Drop",
+    "officialUrl": "https://developers.googleblog.com/hill-climbing-agent-quality-with-agents-cli-evaluation/",
+    "isRecent": true
+  },
   {
     "id": "up-google-workspace-mvpjuigl-t61i",
     "toolId": "google-workspace",
@@ -241,18 +253,6 @@ export const LIVE_UPDATES_DATA: GoogleLiveUpdate[] = [
     "pubDate": "2026-09-14",
     "badge": "Feature Drop",
     "officialUrl": "https://firebase.blog/posts/2026/09/firebase-spend-caps",
-    "isRecent": true
-  },
-  {
-    "id": "up-gemini-mub5i2oc-ehre",
-    "toolId": "gemini",
-    "toolName": "Gemini",
-    "category": "Cloud",
-    "title": "5 ways to use Gemini text-to-speech (TTS) in your apps with Firebase AI Logic",
-    "summary": "Official update published on Firebase Blog.",
-    "pubDate": "2026-09-09",
-    "badge": "Feature Drop",
-    "officialUrl": "https://firebase.blog/posts/2026/09/ai-logic-text-to-speech",
     "isRecent": true
   }
 ];
