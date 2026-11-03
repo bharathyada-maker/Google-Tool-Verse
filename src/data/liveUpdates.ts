@@ -11,10 +11,22 @@ export interface GoogleLiveUpdate {
   isRecent?: boolean;
 }
 
-export const LAST_SYNCED_TIMESTAMP = '2026-11-03T13:09:25.138Z';
+export const LAST_SYNCED_TIMESTAMP = '2026-11-03T22:39:18.359Z';
 export const SYNC_STATUS: 'ONLINE' | 'SYNCING' | 'MAINTENANCE' = 'ONLINE';
 
 export const LIVE_UPDATES_DATA: GoogleLiveUpdate[] = [
+  {
+    "id": "up-gemini-mw19sikr-i1pa",
+    "toolId": "gemini",
+    "toolName": "Gemini",
+    "category": "AI & ML",
+    "title": "Cost per task: Using cheap classifiers to route across Gemini models and thinking levels",
+    "summary": "Per-token API prices keep falling, yet engineering bills for autonomous coding agents keep climbing....",
+    "pubDate": "2026-11-03",
+    "badge": "Feature Drop",
+    "officialUrl": "https://developers.googleblog.com/cost-per-task-using-cheap-classifiers-to-route-across-gemini-models-and-thinking-levels/",
+    "isRecent": true
+  },
   {
     "id": "up-google-ai-studio-mvsno0xu-lh9w",
     "toolId": "google-ai-studio",
@@ -241,18 +253,6 @@ export const LIVE_UPDATES_DATA: GoogleLiveUpdate[] = [
     "pubDate": "2026-09-21",
     "badge": "Feature Drop",
     "officialUrl": "https://developers.googleblog.com/enterprise-grade-precision-for-long-context-multimodal-embedding-inference-on-cloud-tpu/",
-    "isRecent": true
-  },
-  {
-    "id": "up-gemini-mub5i2oc-d1wu",
-    "toolId": "gemini",
-    "toolName": "Gemini",
-    "category": "Cloud",
-    "title": "Introducing Firebase spend caps",
-    "summary": "Spend caps are designed to act as a circuit breaker for services like the Gemini API and Cloud Functions, reducing the risk of a financial surprise from a simple coding error or an",
-    "pubDate": "2026-09-14",
-    "badge": "Feature Drop",
-    "officialUrl": "https://firebase.blog/posts/2026/09/firebase-spend-caps",
     "isRecent": true
   }
 ];
