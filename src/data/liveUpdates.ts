@@ -11,10 +11,22 @@ export interface GoogleLiveUpdate {
   isRecent?: boolean;
 }
 
-export const LAST_SYNCED_TIMESTAMP = '2026-11-03T22:39:18.359Z';
+export const LAST_SYNCED_TIMESTAMP = '2026-11-04T03:40:30.063Z';
 export const SYNC_STATUS: 'ONLINE' | 'SYNCING' | 'MAINTENANCE' = 'ONLINE';
 
 export const LIVE_UPDATES_DATA: GoogleLiveUpdate[] = [
+  {
+    "id": "up-gemini-mw1kjv1r-eyao",
+    "toolId": "gemini",
+    "toolName": "Gemini",
+    "category": "Cloud",
+    "title": "Introducing Firebase spend caps",
+    "summary": "Spend caps are designed to act as a circuit breaker for services like the Gemini API and Cloud Functions, reducing the risk of a financial surprise from a simple coding error or an",
+    "pubDate": "2026-09-14",
+    "badge": "Feature Drop",
+    "officialUrl": "https://firebase.blog/posts/2026/09/firebase-spend-caps",
+    "isRecent": true
+  },
   {
     "id": "up-gemini-mw19sikr-i1pa",
     "toolId": "gemini",
@@ -241,18 +253,6 @@ export const LIVE_UPDATES_DATA: GoogleLiveUpdate[] = [
     "pubDate": "2026-09-21",
     "badge": "Feature Drop",
     "officialUrl": "https://developers.googleblog.com/driving-developer-excellence-inside-the-program-sprints/",
-    "isRecent": true
-  },
-  {
-    "id": "up-gemini-mub5i2fl-51bw",
-    "toolId": "gemini",
-    "toolName": "Gemini",
-    "category": "AI & ML",
-    "title": "Enterprise-Grade Precision for Long-Context Multimodal Embedding Inference on Cloud TPU",
-    "summary": "Google Cloud has natively integrated TPU support into the vLLM serving engine, allowing developers to elastically scale high-demand embedding pipelines using Google Kubernetes Engi",
-    "pubDate": "2026-09-21",
-    "badge": "Feature Drop",
-    "officialUrl": "https://developers.googleblog.com/enterprise-grade-precision-for-long-context-multimodal-embedding-inference-on-cloud-tpu/",
     "isRecent": true
   }
 ];
