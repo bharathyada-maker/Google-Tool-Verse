@@ -11,10 +11,22 @@ export interface GoogleLiveUpdate {
   isRecent?: boolean;
 }
 
-export const LAST_SYNCED_TIMESTAMP = '2026-11-09T14:33:54.573Z';
+export const LAST_SYNCED_TIMESTAMP = '2026-11-10T00:56:17.504Z';
 export const SYNC_STATUS: 'ONLINE' | 'SYNCING' | 'MAINTENANCE' = 'ONLINE';
 
 export const LIVE_UPDATES_DATA: GoogleLiveUpdate[] = [
+  {
+    "id": "up-gemini-mw9zbsjy-vf63",
+    "toolId": "gemini",
+    "toolName": "Gemini",
+    "category": "AI & ML",
+    "title": "From prompt to app: Build with Google Maps in AI Studio",
+    "summary": "Developers can now build applications powered by Google Maps Platform directly within Google AI Studio by prompting Gemini with real-world geospatial concepts. The integration elim",
+    "pubDate": "2026-11-10",
+    "badge": "Feature Drop",
+    "officialUrl": "https://developers.googleblog.com/from-prompt-to-app-build-with-google-maps-in-ai-studio/",
+    "isRecent": true
+  },
   {
     "id": "up-gemini-mw1kjv1r-eyao",
     "toolId": "gemini",
@@ -241,18 +253,6 @@ export const LIVE_UPDATES_DATA: GoogleLiveUpdate[] = [
     "pubDate": "2026-09-21",
     "badge": "Feature Drop",
     "officialUrl": "https://developers.googleblog.com/build-zero-trust-ai-agents-that-judge-intent-not-just-syntax/",
-    "isRecent": true
-  },
-  {
-    "id": "up-gemini-mub5i2fl-9zzr",
-    "toolId": "gemini",
-    "toolName": "Gemini",
-    "category": "AI & ML",
-    "title": "Driving Developer Excellence: Inside the Program Sprints",
-    "summary": "The Gemini Enterprise Developer Experience (DevEx) program conducts ongoing sprint testing of end-to-end developer workflows to identify and rapidly resolve friction points without",
-    "pubDate": "2026-09-21",
-    "badge": "Feature Drop",
-    "officialUrl": "https://developers.googleblog.com/driving-developer-excellence-inside-the-program-sprints/",
     "isRecent": true
   }
 ];
