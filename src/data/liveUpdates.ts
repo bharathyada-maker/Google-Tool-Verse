@@ -11,10 +11,22 @@ export interface GoogleLiveUpdate {
   isRecent?: boolean;
 }
 
-export const LAST_SYNCED_TIMESTAMP = '2026-11-10T13:53:11.849Z';
+export const LAST_SYNCED_TIMESTAMP = '2026-11-10T22:37:22.823Z';
 export const SYNC_STATUS: 'ONLINE' | 'SYNCING' | 'MAINTENANCE' = 'ONLINE';
 
 export const LIVE_UPDATES_DATA: GoogleLiveUpdate[] = [
+  {
+    "id": "up-firebase-mwb9t0cm-u0pi",
+    "toolId": "firebase",
+    "toolName": "Firebase",
+    "category": "Cloud",
+    "title": "Introducing Firebase agent skills for Google Analytics",
+    "summary": "Developers can equip coding agents with specialized Firebase skills to seamlessly initialize Google Analytics and instrument screenviews across modern UI frameworks.",
+    "pubDate": "2026-11-10",
+    "badge": "Feature Drop",
+    "officialUrl": "https://firebase.blog/posts/2026/11/firebase-skills-for-google-analytics",
+    "isRecent": true
+  },
   {
     "id": "up-gemini-mw9zbsjy-vf63",
     "toolId": "gemini",
@@ -241,18 +253,6 @@ export const LIVE_UPDATES_DATA: GoogleLiveUpdate[] = [
     "pubDate": "2026-09-21",
     "badge": "Feature Drop",
     "officialUrl": "https://developers.googleblog.com/agent-anomaly-detection-now-in-private-preview-on-the-gemini-enterprise-agent-platform/",
-    "isRecent": true
-  },
-  {
-    "id": "up-gemini-mub5i2fk-siqj",
-    "toolId": "gemini",
-    "toolName": "Gemini",
-    "category": "AI & ML",
-    "title": "Build zero-trust AI agents that judge intent, not just syntax",
-    "summary": "This blog post explores how to transition AI agents from static, build-time security controls to dynamic runtime governance using the Gemini Enterprise Agent Platform. It highlight",
-    "pubDate": "2026-09-21",
-    "badge": "Feature Drop",
-    "officialUrl": "https://developers.googleblog.com/build-zero-trust-ai-agents-that-judge-intent-not-just-syntax/",
     "isRecent": true
   }
 ];
