@@ -11,10 +11,22 @@ export interface GoogleLiveUpdate {
   isRecent?: boolean;
 }
 
-export const LAST_SYNCED_TIMESTAMP = '2026-11-12T14:08:35.258Z';
+export const LAST_SYNCED_TIMESTAMP = '2026-11-12T22:56:25.651Z';
 export const SYNC_STATUS: 'ONLINE' | 'SYNCING' | 'MAINTENANCE' = 'ONLINE';
 
 export const LIVE_UPDATES_DATA: GoogleLiveUpdate[] = [
+  {
+    "id": "up-gemini-mwe5d75o-2rz3",
+    "toolId": "gemini",
+    "toolName": "Gemini",
+    "category": "AI & ML",
+    "title": "Catch Go bugs that fuzzing misses with Gemini and a constraint solver",
+    "summary": "How pairing Go's surviving compiler bounds-check traps with Gemini 4 Argon and the Z3 constraint solver catches latent out-of-bounds panics in Go code and uncovers a slice-capacity",
+    "pubDate": "2026-11-12",
+    "badge": "Feature Drop",
+    "officialUrl": "https://developers.googleblog.com/catch-go-bugs-that-fuzzing-misses-with-gemini-and-a-constraint-solver/",
+    "isRecent": true
+  },
   {
     "id": "up-firebase-mwb9t0cm-u0pi",
     "toolId": "firebase",
@@ -241,18 +253,6 @@ export const LIVE_UPDATES_DATA: GoogleLiveUpdate[] = [
     "pubDate": "2026-09-21",
     "badge": "Feature Drop",
     "officialUrl": "https://developers.googleblog.com/why-client-sdk-generation-belongs-in-the-open/",
-    "isRecent": true
-  },
-  {
-    "id": "up-gemini-mub5i2fk-4k2o",
-    "toolId": "gemini",
-    "toolName": "Gemini",
-    "category": "AI & ML",
-    "title": "Agent Anomaly Detection, now in Private Preview on the Gemini Enterprise Agent Platform",
-    "summary": "Agent Anomaly Detection is a new, out-of-band oversight layer for the Gemini Enterprise Agent Platform that analyzes OpenTelemetry traces and tool calls to catch behavioral risks w",
-    "pubDate": "2026-09-21",
-    "badge": "Feature Drop",
-    "officialUrl": "https://developers.googleblog.com/agent-anomaly-detection-now-in-private-preview-on-the-gemini-enterprise-agent-platform/",
     "isRecent": true
   }
 ];
