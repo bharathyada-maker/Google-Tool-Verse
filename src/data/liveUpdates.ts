@@ -11,7 +11,7 @@ export interface GoogleLiveUpdate {
   isRecent?: boolean;
 }
 
-export const LAST_SYNCED_TIMESTAMP = '2026-11-14T03:51:56.070Z';
+export const LAST_SYNCED_TIMESTAMP = '2026-11-14T12:38:13.381Z';
 export const SYNC_STATUS: 'ONLINE' | 'SYNCING' | 'MAINTENANCE' = 'ONLINE';
 
 export const LIVE_UPDATES_DATA: GoogleLiveUpdate[] = [
