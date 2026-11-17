@@ -11,10 +11,22 @@ export interface GoogleLiveUpdate {
   isRecent?: boolean;
 }
 
-export const LAST_SYNCED_TIMESTAMP = '2026-11-16T14:09:43.650Z';
+export const LAST_SYNCED_TIMESTAMP = '2026-11-17T01:14:26.112Z';
 export const SYNC_STATUS: 'ONLINE' | 'SYNCING' | 'MAINTENANCE' = 'ONLINE';
 
 export const LIVE_UPDATES_DATA: GoogleLiveUpdate[] = [
+  {
+    "id": "up-gemini-mwk02376-nfng",
+    "toolId": "gemini",
+    "toolName": "Gemini",
+    "category": "AI & ML",
+    "title": "Securing Your Agents: A Hands-On Guide to Agent Anomaly Detection",
+    "summary": "This guide walks developers through setting up Agent Anomaly Detection on the Gemini Enterprise Agent Platform to monitor AI agent telemetry and catch behavioral risks. It demonstr",
+    "pubDate": "2026-11-17",
+    "badge": "Feature Drop",
+    "officialUrl": "https://developers.googleblog.com/securing-your-agents-a-hands-on-guide-to-agent-anomaly-detection/",
+    "isRecent": true
+  },
   {
     "id": "up-gemini-mwe5d75o-2rz3",
     "toolId": "gemini",
@@ -241,18 +253,6 @@ export const LIVE_UPDATES_DATA: GoogleLiveUpdate[] = [
     "pubDate": "2026-09-24",
     "badge": "Feature Drop",
     "officialUrl": "https://developers.googleblog.com/introducing-support-for-local-ai-models-in-the-antigravity-sdk/",
-    "isRecent": true
-  },
-  {
-    "id": "up-google-ai-studio-mub5i2fk-evds",
-    "toolId": "google-ai-studio",
-    "toolName": "Google Ai Studio",
-    "category": "AI & ML",
-    "title": "Why client SDK generation belongs in the open",
-    "summary": "Google has partnered with Speakeasy to open-source their OpenAPI code generation suite under the AGPLv3 license, a strategic move prompted by the sudden shutdown of Google's previo",
-    "pubDate": "2026-09-21",
-    "badge": "Feature Drop",
-    "officialUrl": "https://developers.googleblog.com/why-client-sdk-generation-belongs-in-the-open/",
     "isRecent": true
   }
 ];
