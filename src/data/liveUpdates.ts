@@ -11,10 +11,22 @@ export interface GoogleLiveUpdate {
   isRecent?: boolean;
 }
 
-export const LAST_SYNCED_TIMESTAMP = '2026-11-18T14:42:49.305Z';
+export const LAST_SYNCED_TIMESTAMP = '2026-11-18T23:39:54.586Z';
 export const SYNC_STATUS: 'ONLINE' | 'SYNCING' | 'MAINTENANCE' = 'ONLINE';
 
 export const LIVE_UPDATES_DATA: GoogleLiveUpdate[] = [
+  {
+    "id": "up-firebase-mwmrk8k9-0f5l",
+    "toolId": "firebase",
+    "toolName": "Firebase",
+    "category": "Cloud",
+    "title": "Google Analytics for Firebase iOS SDK outage on September 28, 2026",
+    "summary": "Google&apos;s response to the Firebase iOS SDK outage on September 28, 2026.",
+    "pubDate": "2026-10-02",
+    "badge": "Feature Drop",
+    "officialUrl": "https://firebase.blog/posts/2026/10/firebase-analytics-outage",
+    "isRecent": true
+  },
   {
     "id": "up-firebase-mwm8djdk-9knh",
     "toolId": "firebase",
@@ -241,18 +253,6 @@ export const LIVE_UPDATES_DATA: GoogleLiveUpdate[] = [
     "pubDate": "2026-10-06",
     "badge": "Feature Drop",
     "officialUrl": "https://developers.googleblog.com/google-ai-edge-with-embeddinggemma-2/",
-    "isRecent": true
-  },
-  {
-    "id": "up-gemini-mux7zatc-9nze",
-    "toolId": "gemini",
-    "toolName": "Gemini",
-    "category": "AI & ML",
-    "title": "EmbeddingGemma 2: The Developer Guide",
-    "summary": "EmbeddingGemma 2 is a compact, open-source multimodal embedding model that maps text, code, images, video, and audio into a unified 768-dimensional space. Developers can use the se",
-    "pubDate": "2026-10-06",
-    "badge": "Feature Drop",
-    "officialUrl": "https://developers.googleblog.com/embeddinggemma-2-the-developer-guide/",
     "isRecent": true
   }
 ];
