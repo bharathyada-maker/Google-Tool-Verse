@@ -11,10 +11,46 @@ export interface GoogleLiveUpdate {
   isRecent?: boolean;
 }
 
-export const LAST_SYNCED_TIMESTAMP = '2026-11-17T15:02:44.254Z';
+export const LAST_SYNCED_TIMESTAMP = '2026-11-18T00:07:59.634Z';
 export const SYNC_STATUS: 'ONLINE' | 'SYNCING' | 'MAINTENANCE' = 'ONLINE';
 
 export const LIVE_UPDATES_DATA: GoogleLiveUpdate[] = [
+  {
+    "id": "up-gemini-mwld4hwa-fcuq",
+    "toolId": "gemini",
+    "toolName": "Gemini",
+    "category": "AI & ML",
+    "title": "Gemini 4 Hydrogen: a faster model for general purpose robotics",
+    "summary": "Google's Gemini 4 Hydrogen brings strong spatial and embodied reasoning capabilities to a fast, efficient model built specifically for robotics. To help developers put these capabi",
+    "pubDate": "2026-11-18",
+    "badge": "Feature Drop",
+    "officialUrl": "https://developers.googleblog.com/gemini-hydrogen-for-robotics/",
+    "isRecent": true
+  },
+  {
+    "id": "up-gemini-mwld4hwa-xwc8",
+    "toolId": "gemini",
+    "toolName": "Gemini",
+    "category": "AI & ML",
+    "title": "Build full-stack Android apps with Gemini in Google AI Studio",
+    "summary": "Google AI Studio now lets developers build, test, and ship full-stack Kotlin Android apps from a single prompt—complete with Cloud Firestore, Firebase Authentication, Firebase AI L",
+    "pubDate": "2026-11-18",
+    "badge": "Feature Drop",
+    "officialUrl": "https://developers.googleblog.com/build-full-stack-android-apps-with-gemini-in-google-ai-studio/",
+    "isRecent": true
+  },
+  {
+    "id": "up-google-ai-studio-mwld4i35-ht32",
+    "toolId": "google-ai-studio",
+    "toolName": "Google Ai Studio",
+    "category": "Cloud",
+    "title": "Build full-stack Android apps with AI features using Google AI Studio and Firebase",
+    "summary": "Official update published on Firebase Blog.",
+    "pubDate": "2026-11-17",
+    "badge": "Feature Drop",
+    "officialUrl": "https://firebase.blog/posts/2026/11/full-stack-android-apps-ai-studio-integration",
+    "isRecent": true
+  },
   {
     "id": "up-gemini-mwk02376-nfng",
     "toolId": "gemini",
@@ -217,42 +253,6 @@ export const LIVE_UPDATES_DATA: GoogleLiveUpdate[] = [
     "pubDate": "2026-10-02",
     "badge": "Feature Drop",
     "officialUrl": "https://firebase.blog/posts/2026/10/firebase-analytics-outage",
-    "isRecent": true
-  },
-  {
-    "id": "up-firebase-mulu1ygy-o5ys",
-    "toolId": "firebase",
-    "toolName": "Firebase",
-    "category": "Cloud",
-    "title": "The Firebase plugin is now available in Codex",
-    "summary": "The Firebase agent plugin provides access to Firebase agent skills, the Firebase MCP server, and the Firebase CLI, giving Codex the ability to build Firebase-powered apps with less",
-    "pubDate": "2026-09-28",
-    "badge": "Feature Drop",
-    "officialUrl": "https://firebase.blog/posts/2026/09/firebase-plugin-for-codex",
-    "isRecent": true
-  },
-  {
-    "id": "up-firebase-mulu1ygy-70t1",
-    "toolId": "firebase",
-    "toolName": "Firebase",
-    "category": "Cloud",
-    "title": "New regions and networks: Firebase Phone Number Verification adds more networks",
-    "summary": "Official update published on Firebase Blog.",
-    "pubDate": "2026-09-28",
-    "badge": "Feature Drop",
-    "officialUrl": "https://firebase.blog/posts/2026/09/firebase-pnv-more-networks",
-    "isRecent": true
-  },
-  {
-    "id": "up-gemini-muevt967-eo9s",
-    "toolId": "gemini",
-    "toolName": "Gemini",
-    "category": "AI & ML",
-    "title": "Introducing Support for Local AI Models in the Antigravity SDK",
-    "summary": "The Google Antigravity SDK now empowers developers to execute offline, agentic workflows locally using models like Gemma 4 26B A4B via LiteRT. This update facilitates powerful hybr",
-    "pubDate": "2026-09-24",
-    "badge": "Feature Drop",
-    "officialUrl": "https://developers.googleblog.com/introducing-support-for-local-ai-models-in-the-antigravity-sdk/",
     "isRecent": true
   }
 ];
