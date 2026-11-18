@@ -11,10 +11,22 @@ export interface GoogleLiveUpdate {
   isRecent?: boolean;
 }
 
-export const LAST_SYNCED_TIMESTAMP = '2026-11-18T00:07:59.634Z';
+export const LAST_SYNCED_TIMESTAMP = '2026-11-18T14:42:49.305Z';
 export const SYNC_STATUS: 'ONLINE' | 'SYNCING' | 'MAINTENANCE' = 'ONLINE';
 
 export const LIVE_UPDATES_DATA: GoogleLiveUpdate[] = [
+  {
+    "id": "up-firebase-mwm8djdk-9knh",
+    "toolId": "firebase",
+    "toolName": "Firebase",
+    "category": "Cloud",
+    "title": "The Firebase plugin is now available in Codex",
+    "summary": "The Firebase agent plugin provides access to Firebase agent skills, the Firebase MCP server, and the Firebase CLI, giving Codex the ability to build Firebase-powered apps with less",
+    "pubDate": "2026-09-28",
+    "badge": "Feature Drop",
+    "officialUrl": "https://firebase.blog/posts/2026/09/firebase-plugin-for-codex",
+    "isRecent": true
+  },
   {
     "id": "up-gemini-mwld4hwa-fcuq",
     "toolId": "gemini",
@@ -241,18 +253,6 @@ export const LIVE_UPDATES_DATA: GoogleLiveUpdate[] = [
     "pubDate": "2026-10-06",
     "badge": "Feature Drop",
     "officialUrl": "https://developers.googleblog.com/embeddinggemma-2-the-developer-guide/",
-    "isRecent": true
-  },
-  {
-    "id": "up-firebase-mursa8hd-5o4a",
-    "toolId": "firebase",
-    "toolName": "Firebase",
-    "category": "Cloud",
-    "title": "Google Analytics for Firebase iOS SDK outage on September 28, 2026",
-    "summary": "Google&apos;s response to the Firebase iOS SDK outage on September 28, 2026.",
-    "pubDate": "2026-10-02",
-    "badge": "Feature Drop",
-    "officialUrl": "https://firebase.blog/posts/2026/10/firebase-analytics-outage",
     "isRecent": true
   }
 ];
