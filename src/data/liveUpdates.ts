@@ -11,10 +11,34 @@ export interface GoogleLiveUpdate {
   isRecent?: boolean;
 }
 
-export const LAST_SYNCED_TIMESTAMP = '2026-11-19T14:49:55.897Z';
+export const LAST_SYNCED_TIMESTAMP = '2026-11-19T23:58:39.111Z';
 export const SYNC_STATUS: 'ONLINE' | 'SYNCING' | 'MAINTENANCE' = 'ONLINE';
 
 export const LIVE_UPDATES_DATA: GoogleLiveUpdate[] = [
+  {
+    "id": "up-gemini-mwo7o6io-3tc8",
+    "toolId": "gemini",
+    "toolName": "Gemini",
+    "category": "AI & ML",
+    "title": "Multi-Turn Agentic Reinforcement Learning with Tunix and Gemma 4 on Google TPUs",
+    "summary": "This post walks developers through training a multi-turn, tool-using LLM agent using Tunix and Gemma 4 on Cloud TPUs. By leveraging agentic Group Relative Policy Optimization (GRPO",
+    "pubDate": "2026-11-19",
+    "badge": "Feature Drop",
+    "officialUrl": "https://developers.googleblog.com/multi-turn-agentic-reinforcement-learning-with-tunix-and-gemma-4-on-google-tpus/",
+    "isRecent": true
+  },
+  {
+    "id": "up-firebase-mwo7o6x2-zrur",
+    "toolId": "firebase",
+    "toolName": "Firebase",
+    "category": "Cloud",
+    "title": "Crashlytics for web is now in public preview",
+    "summary": "Firebase Crashlytics now supports web apps: JavaScript error monitoring for Next.js, React, and Angular, with stack traces that point to the exact line.",
+    "pubDate": "2026-11-19",
+    "badge": "Feature Drop",
+    "officialUrl": "https://firebase.blog/posts/2026/11/crashlytics-web-public-preview",
+    "isRecent": true
+  },
   {
     "id": "up-firebase-mwmrk8k9-0f5l",
     "toolId": "firebase",
@@ -229,30 +253,6 @@ export const LIVE_UPDATES_DATA: GoogleLiveUpdate[] = [
     "pubDate": "2026-10-13",
     "badge": "Feature Drop",
     "officialUrl": "https://developers.googleblog.com/optimizing-a-200000-line-python-codebase-overnight-with-gemini-4-argon/",
-    "isRecent": true
-  },
-  {
-    "id": "up-firebase-mv047aq6-hux4",
-    "toolId": "firebase",
-    "toolName": "Firebase",
-    "category": "Cloud",
-    "title": "Building an iOS app in 6 hours with Firebase and Antigravity",
-    "summary": "We built a production-ready iOS app with Firebase, including authentication, Firestore, Cloud Messaging, Cloud Functions and App Check, in just six hours using Google&apos;s Antigr",
-    "pubDate": "2026-10-08",
-    "badge": "Feature Drop",
-    "officialUrl": "https://firebase.blog/posts/2026/09/build-ios-app-firebase-antigravity",
-    "isRecent": true
-  },
-  {
-    "id": "up-gemini-mux7zatc-o1fz",
-    "toolId": "gemini",
-    "toolName": "Gemini",
-    "category": "AI & ML",
-    "title": "Bring multimodal semantic search to the edge with EmbeddingGemma 2",
-    "summary": "EmbeddingGemma 2 is a new 740M open-weight multimodal model that maps text, images, video, and audio into a unified vector space for privacy-first, on-device retrieval. Developers ",
-    "pubDate": "2026-10-06",
-    "badge": "Feature Drop",
-    "officialUrl": "https://developers.googleblog.com/google-ai-edge-with-embeddinggemma-2/",
     "isRecent": true
   }
 ];
