@@ -11,10 +11,22 @@ export interface GoogleLiveUpdate {
   isRecent?: boolean;
 }
 
-export const LAST_SYNCED_TIMESTAMP = '2026-11-19T23:58:39.111Z';
+export const LAST_SYNCED_TIMESTAMP = '2026-11-20T05:41:13.436Z';
 export const SYNC_STATUS: 'ONLINE' | 'SYNCING' | 'MAINTENANCE' = 'ONLINE';
 
 export const LIVE_UPDATES_DATA: GoogleLiveUpdate[] = [
+  {
+    "id": "up-firebase-mwojwqqj-o3us",
+    "toolId": "firebase",
+    "toolName": "Firebase",
+    "category": "Cloud",
+    "title": "Building an iOS app in 6 hours with Firebase and Antigravity",
+    "summary": "We built a production-ready iOS app with Firebase, including authentication, Firestore, Cloud Messaging, Cloud Functions and App Check, in just six hours using Google&apos;s Antigr",
+    "pubDate": "2026-10-08",
+    "badge": "Feature Drop",
+    "officialUrl": "https://firebase.blog/posts/2026/09/build-ios-app-firebase-antigravity",
+    "isRecent": true
+  },
   {
     "id": "up-gemini-mwo7o6io-3tc8",
     "toolId": "gemini",
@@ -241,18 +253,6 @@ export const LIVE_UPDATES_DATA: GoogleLiveUpdate[] = [
     "pubDate": "2026-10-13",
     "badge": "Feature Drop",
     "officialUrl": "https://developers.googleblog.com/gemini-4-argon-for-robotics/",
-    "isRecent": true
-  },
-  {
-    "id": "up-gemini-mv788hhc-efyy",
-    "toolId": "gemini",
-    "toolName": "Gemini",
-    "category": "AI & ML",
-    "title": "Optimizing a 200,000-line Python codebase overnight with Gemini 4 Argon",
-    "summary": "How our engineering team ran Gemini 4 Argon unattended overnight with .agents/skills and /goal mode to cut in-memory session prep overhead by 40% in long sessions and speed up cold",
-    "pubDate": "2026-10-13",
-    "badge": "Feature Drop",
-    "officialUrl": "https://developers.googleblog.com/optimizing-a-200000-line-python-codebase-overnight-with-gemini-4-argon/",
     "isRecent": true
   }
 ];
