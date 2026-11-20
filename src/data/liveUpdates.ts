@@ -11,10 +11,34 @@ export interface GoogleLiveUpdate {
   isRecent?: boolean;
 }
 
-export const LAST_SYNCED_TIMESTAMP = '2026-11-20T14:31:05.665Z';
+export const LAST_SYNCED_TIMESTAMP = '2026-11-20T23:27:28.431Z';
 export const SYNC_STATUS: 'ONLINE' | 'SYNCING' | 'MAINTENANCE' = 'ONLINE';
 
 export const LIVE_UPDATES_DATA: GoogleLiveUpdate[] = [
+  {
+    "id": "up-gemini-mwplzxxb-tuwa",
+    "toolId": "gemini",
+    "toolName": "Gemini",
+    "category": "AI & ML",
+    "title": "How to securely connect internal Cloud Run MCP servers to Gemini Enterprise",
+    "summary": "How to connect Gemini Enterprise privately to internal StreamableHTTP MCP servers on Cloud Run using Egress Agent Gateway, Private Service Connect, FQDN-scoped Private Cloud DNS, a",
+    "pubDate": "2026-11-20",
+    "badge": "Feature Drop",
+    "officialUrl": "https://developers.googleblog.com/how-to-securely-connect-internal-cloud-run-mcp-servers-to-gemini-enterprise/",
+    "isRecent": true
+  },
+  {
+    "id": "up-gemini-mwplzxxb-08zl",
+    "toolId": "gemini",
+    "toolName": "Gemini",
+    "category": "AI & ML",
+    "title": "How to handle user, connector, and agent auth in Gemini Enterprise with a custom UI",
+    "summary": "When building a custom enterprise UI on top of Gemini Enterprise's :streamAssist API, developers must manually implement three core authentication layers. These include authenticat",
+    "pubDate": "2026-11-20",
+    "badge": "Feature Drop",
+    "officialUrl": "https://developers.googleblog.com/how-to-handle-user-connector-and-agent-auth-in-gemini-enterprise-with-a-custom-ui/",
+    "isRecent": true
+  },
   {
     "id": "up-firebase-mwojwqqj-o3us",
     "toolId": "firebase",
@@ -229,30 +253,6 @@ export const LIVE_UPDATES_DATA: GoogleLiveUpdate[] = [
     "pubDate": "2026-10-19",
     "badge": "Feature Drop",
     "officialUrl": "https://developers.googleblog.com/step-by-step-guide-build-a-voice-agent-that-never-goes-silent-using-adk/",
-    "isRecent": true
-  },
-  {
-    "id": "up-gemini-mv9pxblm-uyjq",
-    "toolId": "gemini",
-    "toolName": "Gemini",
-    "category": "AI & ML",
-    "title": "Evaluating AI agents: moving past the vibe check",
-    "summary": "A practical engineering guide and reference architecture for establishing continuous evaluation pipelines for multi-turn AI agents using Gemini Enterprise Agent Platform, Google AD",
-    "pubDate": "2026-10-15",
-    "badge": "Feature Drop",
-    "officialUrl": "https://developers.googleblog.com/evaluating-ai-agents-moving-past-the-vibe-check/",
-    "isRecent": true
-  },
-  {
-    "id": "up-gemini-mv788hhb-wo3a",
-    "toolId": "gemini",
-    "toolName": "Gemini",
-    "category": "AI & ML",
-    "title": "Gemini 4 Argon for Robotics",
-    "summary": "Gemini 4 Argon is a general-purpose physical reasoning model designed to enhance workflows across the robotics stack with advanced capabilities in physical understanding, code gene",
-    "pubDate": "2026-10-13",
-    "badge": "Feature Drop",
-    "officialUrl": "https://developers.googleblog.com/gemini-4-argon-for-robotics/",
     "isRecent": true
   }
 ];
