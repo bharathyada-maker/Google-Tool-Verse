@@ -11,10 +11,22 @@ export interface GoogleLiveUpdate {
   isRecent?: boolean;
 }
 
-export const LAST_SYNCED_TIMESTAMP = '2026-11-23T16:42:45.788Z';
+export const LAST_SYNCED_TIMESTAMP = '2026-11-24T03:33:30.119Z';
 export const SYNC_STATUS: 'ONLINE' | 'SYNCING' | 'MAINTENANCE' = 'ONLINE';
 
 export const LIVE_UPDATES_DATA: GoogleLiveUpdate[] = [
+  {
+    "id": "up-google-ai-studio-mwu53w25-o7sl",
+    "toolId": "google-ai-studio",
+    "toolName": "Google Ai Studio",
+    "category": "AI & ML",
+    "title": "Did the user ask for this? Securing AI agents against intent hijacking with Semantic governance",
+    "summary": "Semantic governance policies protect AI agents from indirect prompt injection and intent hijacking by validating every proposed tool call against user intent and natural language c",
+    "pubDate": "2026-11-24",
+    "badge": "Feature Drop",
+    "officialUrl": "https://developers.googleblog.com/did-the-user-ask-for-this-securing-ai-agents-against-intent-hijacking-with-semantic-governance-policies/",
+    "isRecent": true
+  },
   {
     "id": "up-gemini-mwplzxxb-tuwa",
     "toolId": "gemini",
@@ -241,18 +253,6 @@ export const LIVE_UPDATES_DATA: GoogleLiveUpdate[] = [
     "pubDate": "2026-10-22",
     "badge": "Feature Drop",
     "officialUrl": "https://developers.googleblog.com/architecting-governed-self-evolving-ai-agents-on-gemini-agent-platform/",
-    "isRecent": true
-  },
-  {
-    "id": "up-gemini-mvfjyfuh-d77m",
-    "toolId": "gemini",
-    "toolName": "Gemini",
-    "category": "AI & ML",
-    "title": "Step by Step guide: Build a Voice Agent That Never Goes Silent using ADK",
-    "summary": "The open-source Agent Development Kit (ADK) and gemini-3.8-live enable developers to build responsive voice agents by implementing non-blocking tools in Python. Developers can use ",
-    "pubDate": "2026-10-19",
-    "badge": "Feature Drop",
-    "officialUrl": "https://developers.googleblog.com/step-by-step-guide-build-a-voice-agent-that-never-goes-silent-using-adk/",
     "isRecent": true
   }
 ];
