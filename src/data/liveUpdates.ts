@@ -11,10 +11,22 @@ export interface GoogleLiveUpdate {
   isRecent?: boolean;
 }
 
-export const LAST_SYNCED_TIMESTAMP = '2026-11-24T16:38:47.796Z';
+export const LAST_SYNCED_TIMESTAMP = '2026-11-25T01:41:50.952Z';
 export const SYNC_STATUS: 'ONLINE' | 'SYNCING' | 'MAINTENANCE' = 'ONLINE';
 
 export const LIVE_UPDATES_DATA: GoogleLiveUpdate[] = [
+  {
+    "id": "up-vertex-ai-mwvgk5ni-6b5w",
+    "toolId": "vertex-ai",
+    "toolName": "Vertex Ai",
+    "category": "AI & ML",
+    "title": "From Files to Cited Answers in One API Call: Managed Ingestion and SearchDocuments in Agent Ret",
+    "summary": "Agent Retrieval in Vertex AI introduces managed ingestion and SearchDocuments to replace custom chunking and embedding pipelines. Developers can now import document and video files",
+    "pubDate": "2026-11-25",
+    "badge": "Feature Drop",
+    "officialUrl": "https://developers.googleblog.com/from-files-to-cited-answers-in-one-api-call-managed-ingestion-and-searchdocuments-in-agent-retrieval/",
+    "isRecent": true
+  },
   {
     "id": "up-google-ai-studio-mwu53w25-o7sl",
     "toolId": "google-ai-studio",
@@ -241,18 +253,6 @@ export const LIVE_UPDATES_DATA: GoogleLiveUpdate[] = [
     "pubDate": "2026-10-26",
     "badge": "Feature Drop",
     "officialUrl": "https://developers.googleblog.com/preview-edit-and-collaborate-on-markdown-md-files-natively-in-google-docs-and-drive/",
-    "isRecent": true
-  },
-  {
-    "id": "up-gemini-mvk0u5zs-06p0",
-    "toolId": "gemini",
-    "toolName": "Gemini",
-    "category": "AI & ML",
-    "title": "Architecting Governed, Self-Evolving AI Agents on Google Cloud",
-    "summary": "Learn how Project Chrysalis combines Google Cloud's Gemini Enterprise Agent Platform, Agent Development Kit (ADK), BigQuery, and a four-gate defense-in-depth security stack (Model ",
-    "pubDate": "2026-10-22",
-    "badge": "Feature Drop",
-    "officialUrl": "https://developers.googleblog.com/architecting-governed-self-evolving-ai-agents-on-gemini-agent-platform/",
     "isRecent": true
   }
 ];
